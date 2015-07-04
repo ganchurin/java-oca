@@ -1,1 +1,1 @@
-# java_cert_snippets
+# Foo project
