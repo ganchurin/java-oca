@@ -1,0 +1,9 @@
+# Intellij Idea specific files
+.idea/
+*.iml
+
+# Gradle dir
+.gradle
+
+# Gradle build dir
+build
