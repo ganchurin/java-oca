@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class ShortBoundaryTest {
+public class ShortBounds {
 
 	@Test
 	public void testUpperBound() {

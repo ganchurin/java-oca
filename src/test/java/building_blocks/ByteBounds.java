@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class ByteBoundaryTest {
+public class ByteBounds {
 
 	@Test
 	public void testUpperBound() {
