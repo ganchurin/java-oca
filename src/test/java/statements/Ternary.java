@@ -18,9 +18,9 @@ public class Ternary {
 	@Test
 	public void testTernaryRightExpression() {
 		int x = 2, y = 1;
-		int q = x == y ? --x : --y;
+		int r = x == y ? --x : --y;
 		assertTrue(x == 2); // stays unchanged
 		assertTrue(y == 0);
-		assertTrue(q == 0);
+		assertTrue(r == 0);
 	}
 }
