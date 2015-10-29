@@ -1,4 +1,4 @@
-package building_blocks;
+package building_blocks.bounds;
 
 import org.junit.Test;
 
