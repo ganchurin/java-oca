@@ -15,9 +15,9 @@ public class Switch {
 			case x:
 				sum++;
 			default:
-				sum++;
+				sum++; // matched case with no break, execute and jump to proceeding case
 			case y:
-				sum++;
+				sum++; // execute and break
 				break;
 			case z:
 				sum++;
