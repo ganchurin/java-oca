@@ -9,18 +9,19 @@ public class Switch {
 	@Test
 	public void testSwitch() {
 		int condition = 4;
-		int x = 0;
+		int sum = 0;
+		final int x = 1, y = 2, z = 3;
 		switch (condition) {
+			case x:
+				sum++;
 			default:
-				x++;
-			case 1:
-				x++;
+				sum++;
+			case y:
+				sum++;
 				break;
-			case 2:
-				x++;
-			case 3:
-				x++;
+			case z:
+				sum++;
 		}
-		assertTrue(x == 2);
+		assertTrue(sum == 2);
 	}
 }
