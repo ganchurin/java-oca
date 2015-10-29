@@ -8,10 +8,10 @@ public class Decrement {
 
 	@Test
 	public void testDecrement() {
-		int x = 1;
-		assertTrue(x-- == 1);
-		assertTrue(x == 0);
-		assertTrue(++x == 1);
+		int x = 2;
+		assertTrue(x-- == 2);
 		assertTrue(x == 1);
+		assertTrue(--x == 0);
+		assertTrue(x == 0);
 	}
 }
