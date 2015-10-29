@@ -8,14 +8,14 @@ public class ByteBounds {
 
 	@Test
 	public void testUpperBound() {
-		assertTrue((byte) (127) == 127);
-		assertTrue((byte) (128) == -128);
+		assertTrue(Byte.MAX_VALUE == 127);
+		assertTrue((byte) (Byte.MAX_VALUE + 1) == Byte.MIN_VALUE);
 	}
 
 	@Test
 	public void testLowerBound() {
-		assertTrue((byte) (-128) == -128);
-		assertTrue((byte) (-129) == 127);
+		assertTrue(Byte.MIN_VALUE == -128);
+		assertTrue((byte) (Byte.MIN_VALUE - 1) == Byte.MAX_VALUE);
 	}
 
 
