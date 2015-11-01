@@ -1,4 +1,4 @@
-package operators;
+package operators.binary;
 
 import org.junit.Assert;
 import org.junit.Test;
