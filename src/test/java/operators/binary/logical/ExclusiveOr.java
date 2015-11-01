@@ -10,6 +10,7 @@ public class ExclusiveOr {
 	public void testExclusiveOr() {
 		boolean x = true, y = false;
 
+		// Is true if any operand is true
 		assertTrue((x ^ x) == false);
 		assertTrue((x ^ y) == true);
 		assertTrue((y ^ x) == true);

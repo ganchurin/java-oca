@@ -15,4 +15,13 @@ public class InclusiveOr {
 		assertTrue((y | x) == true);
 		assertTrue((y | y) == false);
 	}
+
+	@Test
+	public void testLongCircuit() {
+		int x = 1;
+
+		// Right-hand expression is always computed
+		assertTrue((true | x++ == 1) == true);
+		assertTrue(x == 2);
+	}
 }
