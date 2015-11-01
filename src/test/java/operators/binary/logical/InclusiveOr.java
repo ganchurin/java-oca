@@ -10,6 +10,7 @@ public class InclusiveOr {
 	public void testInclusiveOr() {
 		boolean x = true, y = false;
 
+		// Is true if any operand is true
 		assertTrue((x | x) == true);
 		assertTrue((x | y) == true);
 		assertTrue((y | x) == true);
