@@ -7,15 +7,18 @@ import static org.junit.Assert.assertTrue;
 public class IntBase {
 
 	@Test
-	public void testBase() {
-		// Check octal base
+	public void testOctalBase() {
 		assertTrue(07777 == 4095); // 8 ^ 4 - 1
+	}
 
-		// Check binary base
+	@Test
+	public void testBinaryBase() {
 		assertTrue(0b1111 == 15); // 2 ^ 4 - 1
 		assertTrue(0B1111 == 15);
+	}
 
-		// Check hex base
+	@Test
+	public void testHexBase() {
 		assertTrue(0xFFFF == 65535); // 16 ^ 4 - 1
 		assertTrue(0xffff == 65535);
 		assertTrue(0XFFFF == 65535);
