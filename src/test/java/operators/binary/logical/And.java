@@ -1,4 +1,4 @@
-package operators.unary.logical;
+package operators.binary.logical;
 
 import org.junit.Test;
 
