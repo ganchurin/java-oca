@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 public class Decrement {
 
 	@Test
-	public void testDecrement() {
+	public void testPreDecrement() {
 		int x = 1;
 		assertTrue(--x == 0);
 		assertTrue(x == 0);

@@ -7,11 +7,16 @@ import static org.junit.Assert.assertTrue;
 public class Increment {
 
 	@Test
-	public void testIncrement() {
-		int x = 1;
-		assertTrue(x++ == 1);
-		assertTrue(x == 2);
-		assertTrue(++x == 3);
-		assertTrue(x == 3);
+	public void testPreIncrement() {
+		int x = 0;
+		assertTrue(++x == 1);
+		assertTrue(x == 1);
+	}
+
+	@Test
+	public void testPostIncrement() {
+		int x = 0;
+		assertTrue(x++ == 0);
+		assertTrue(x == 1);
 	}
 }
