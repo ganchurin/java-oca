@@ -10,7 +10,7 @@ public class And {
 	public void testAnd() {
 		boolean x = true, y = false;
 
-		// Is true iff both operands are true
+		// Is true if both operands are true
 		assertTrue((x & x) == true);
 		assertTrue((x & y) == false);
 		assertTrue((y & x) == false);
