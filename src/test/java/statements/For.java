@@ -8,10 +8,11 @@ public class For {
 
 	@Test
 	public void testFor() {
-		int x = 0;
-		for (int y = 0; y < 10; y++) {
-			x += 2;
+		int x, y = 0;
+		for (x = 0; x < 10; x++) {
+			y += y++;
 		}
-		assertTrue(x == 20);
+		assertTrue(x == 10);
+		assertTrue(y == 0);
 	}
 }
