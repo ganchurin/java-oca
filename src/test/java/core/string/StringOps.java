@@ -66,4 +66,56 @@ public class StringOps {
 		assertEquals(s2, s4);
 		assertEquals(s3, s4);
 	}
+
+	@Test
+	public void checkLength() {
+		String numbers = "12345";
+		assertTrue(numbers.length() == 5);
+	}
+
+	@Test
+	public void checkCharAt() {
+		String numbers = "12345";
+		assertTrue(numbers.charAt(0) == '1');
+		assertTrue(numbers.charAt(1) == '2');
+		assertTrue(numbers.charAt(2) == '3');
+		assertTrue(numbers.charAt(3) == '4');
+		assertTrue(numbers.charAt(4) == '5');
+	}
+
+	@Test
+	public void testIndexOfChar() {
+		String numbers = "12345";
+		assertTrue(numbers.indexOf('1') == 0);
+		assertTrue(numbers.indexOf('2') == 1);
+		assertTrue(numbers.indexOf('3') == 2);
+		assertTrue(numbers.indexOf('4') == 3);
+		assertTrue(numbers.indexOf('5') == 4);
+		assertTrue(numbers.indexOf('6') == -1);
+	}
+
+	@Test
+	public void testIndexOfCharFromIndex() {
+		String numbers = "12345";
+		assertTrue(numbers.indexOf('1', 3) == -1);
+		assertTrue(numbers.indexOf('3', 3) == -1);
+		assertTrue(numbers.indexOf('5', 3) == 4);
+	}
+
+	@Test
+	public void testIndexOfString() {
+		String numbers = "12345";
+		assertTrue(numbers.indexOf("12") == 0);
+		assertTrue(numbers.indexOf("34") == 2);
+		assertTrue(numbers.indexOf("56") == -1);
+	}
+
+	@Test
+	public void testIndexOfStringFromIndex() {
+		String numbers = "12345";
+		assertTrue(numbers.indexOf("12", 2) == -1);
+		assertTrue(numbers.indexOf("34", 2) == 2);
+		assertTrue(numbers.indexOf("56", 2) == -1);
+	}
+
 }
