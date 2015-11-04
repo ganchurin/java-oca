@@ -2,7 +2,8 @@ package core.string;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class EqualityOps {
 
@@ -26,15 +27,32 @@ public class EqualityOps {
 	public void checkValueEquality() {
 		String s1 = "Firefly";
 		String s2 = "Firefly";
-		assertEquals(s1, s2);
+		assertTrue(s1.equals(s2));
 
 		String s3 = new String("Firefly");
-		assertEquals(s1, s3);
-		assertEquals(s2, s3);
+		assertTrue(s1.equals(s3));
+		assertTrue(s2.equals(s3));
 
 		String s4 = new String(s1);
-		assertEquals(s1, s4);
-		assertEquals(s2, s4);
-		assertEquals(s3, s4);
+		assertTrue(s1.equals(s4));
+		assertTrue(s2.equals(s4));
+		assertTrue(s3.equals(s4));
+	}
+
+	@Test
+	public void checkValueEqualityIgnoreCase() {
+		String s1 = "firefly";
+		String s2 = "FIREFLY";
+		assertTrue(s1.equalsIgnoreCase(s2));
+
+		String s3 = new String("Firefly");
+		assertTrue(s1.equalsIgnoreCase(s3));
+		assertTrue(s2.equalsIgnoreCase(s3));
+
+		String s4 = new String(s1);
+		assertTrue(s1.equalsIgnoreCase(s4));
+		assertTrue(s2.equalsIgnoreCase(s4));
+		assertTrue(s3.equalsIgnoreCase(s4));
+
 	}
 }
