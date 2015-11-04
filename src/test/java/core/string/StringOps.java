@@ -35,9 +35,15 @@ public class StringOps {
 	}
 
 	@Test
-	public void contains() {
+	public void checkContains() {
 		assertTrue("Firefly".contains("fly"));
 		assertFalse("Firefly".contains("bee"));
+	}
+
+	@Test
+	public void checkReplace() {
+		assertEquals("Firefly".replace('r', 'v'), "Fivefly");
+		assertEquals("Firefly".replace("ref", "nal"), "Finally");
 	}
 
 }
