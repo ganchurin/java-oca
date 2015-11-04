@@ -46,4 +46,9 @@ public class StringOps {
 		assertEquals("Firefly".replace("ref", "nal"), "Finally");
 	}
 
+	@Test
+	public void checkTrim() {
+		assertEquals(" \t \n \r Mission Serenity \t \n \r ".trim(), "Mission Serenity");
+	}
+
 }
