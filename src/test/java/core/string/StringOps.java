@@ -34,4 +34,10 @@ public class StringOps {
 		assertFalse("Firefly".endsWith("fall"));
 	}
 
+	@Test
+	public void contains() {
+		assertTrue("Firefly".contains("fly"));
+		assertFalse("Firefly".contains("bee"));
+	}
+
 }
