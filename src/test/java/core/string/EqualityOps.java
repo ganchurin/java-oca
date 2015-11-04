@@ -53,6 +53,5 @@ public class EqualityOps {
 		assertTrue(s1.equalsIgnoreCase(s4));
 		assertTrue(s2.equalsIgnoreCase(s4));
 		assertTrue(s3.equalsIgnoreCase(s4));
-
 	}
 }

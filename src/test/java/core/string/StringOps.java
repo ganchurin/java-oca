@@ -2,8 +2,7 @@ package core.string;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class StringOps {
 
@@ -21,6 +20,18 @@ public class StringOps {
 	@Test
 	public void checkUpperCase() {
 		assertEquals("aBc123".toUpperCase(), "ABC123");
+	}
+
+	@Test
+	public void checkStartsWith() {
+		assertTrue("Firefly".startsWith("Fire"));
+		assertFalse("Firefly".startsWith("Water"));
+	}
+
+	@Test
+	public void checkEndsWith() {
+		assertTrue("Firefly".endsWith("fly"));
+		assertFalse("Firefly".endsWith("fall"));
 	}
 
 }
