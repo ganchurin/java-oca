@@ -50,4 +50,8 @@ public class StringOps {
 		assertEquals(" \t \n \r Mission Serenity \t \n \r ".trim(), "Mission Serenity");
 	}
 
+	@Test
+	public void checkMethodChain() {
+		assertEquals(" Firefly ".trim().toLowerCase().replace('f', 'F'), "FireFly");
+	}
 }
