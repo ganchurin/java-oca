@@ -8,42 +8,41 @@ public class StringOps {
 
 	@Test
 	public void checkLength() {
-		String numbers = "12345";
-		assertTrue(numbers.length() == 5);
+		assertTrue("Firefly".length() == 7);
 	}
 
 	@Test
-	public void checkLowerCase() {
-		assertEquals("aBc123".toLowerCase(), "abc123");
+	public void checkToLowerCase() {
+		assertEquals("Firefly".toLowerCase(), "firefly");
 	}
 
 	@Test
-	public void checkUpperCase() {
-		assertEquals("aBc123".toUpperCase(), "ABC123");
+	public void checkToUpperCase() {
+		assertEquals("Firefly".toUpperCase(), "FIREFLY");
 	}
 
 	@Test
 	public void checkStartsWith() {
 		assertTrue("Firefly".startsWith("Fire"));
-		assertFalse("Firefly".startsWith("Water"));
+		assertFalse("Firefly".startsWith("Ice"));
 	}
 
 	@Test
 	public void checkEndsWith() {
 		assertTrue("Firefly".endsWith("fly"));
-		assertFalse("Firefly".endsWith("fall"));
+		assertFalse("Firefly".endsWith("foo"));
 	}
 
 	@Test
 	public void checkContains() {
-		assertTrue("Firefly".contains("fly"));
-		assertFalse("Firefly".contains("bee"));
+		assertTrue("Firefly".contains("re"));
+		assertFalse("Firefly".contains("se"));
 	}
 
 	@Test
 	public void checkReplace() {
-		assertEquals("Firefly".replace('r', 'v'), "Fivefly");
-		assertEquals("Firefly".replace("ref", "nal"), "Finally");
+		assertEquals("Firefly".replace('f', 's'), "Firesly");
+		assertEquals("Firefly".replace("fly", "ball"), "Fireball");
 	}
 
 	@Test
