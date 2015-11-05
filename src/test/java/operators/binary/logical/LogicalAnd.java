@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class And {
+public class LogicalAnd {
 
 	@Test
 	public void testAnd() {
