@@ -2,6 +2,7 @@ package core.stringbuilder;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class IndexOps {
@@ -30,5 +31,23 @@ public class IndexOps {
 		assertTrue(sb.indexOf("2", 1) == 1);
 		assertTrue(sb.indexOf("3", 1) == 2);
 		assertTrue(sb.indexOf("4", 1) == -1);
+	}
+
+	@Test
+	public void checkSubstring() {
+		StringBuilder sb = new StringBuilder("123");
+		assertEquals(sb.substring(0), "123");
+		assertEquals(sb.substring(1), "23");
+		assertEquals(sb.substring(2), "3");
+		assertEquals(sb.substring(3), "");
+	}
+
+	@Test
+	public void checkSubstringUntilIndex() {
+		StringBuilder sb = new StringBuilder("123");
+		assertEquals(sb.substring(0, 3), "123");
+		assertEquals(sb.substring(0, 2), "12");
+		assertEquals(sb.substring(0, 1), "1");
+		assertEquals(sb.substring(0, 0), "");
 	}
 }
