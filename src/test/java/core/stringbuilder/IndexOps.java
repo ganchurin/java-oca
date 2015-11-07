@@ -59,7 +59,7 @@ public class IndexOps {
 	}
 
 	@Test
-	public void checkDelete2() {
+	public void checkDeleteFromUntilIndex() {
 		StringBuilder sb = new StringBuilder("123");
 		sb.delete(0, 2);
 		assertEquals(sb.toString(), "3");
