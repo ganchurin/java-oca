@@ -52,14 +52,14 @@ public class IndexOps {
 	}
 
 	@Test
-	public void checkDelete() {
+	public void checkDeleteCharAt() {
 		StringBuilder sb = new StringBuilder("123");
 		sb.deleteCharAt(2);
 		assertEquals(sb.toString(), "12");
 	}
 
 	@Test
-	public void checkDeleteFromUntilIndex() {
+	public void checkDeleteStringFromUntilIndex() {
 		StringBuilder sb = new StringBuilder("123");
 		sb.delete(0, 2);
 		assertEquals(sb.toString(), "3");
