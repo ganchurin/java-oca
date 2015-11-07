@@ -1,5 +1,6 @@
 package core.stringbuilder;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -7,9 +8,15 @@ import static org.junit.Assert.assertTrue;
 
 public class IndexOps {
 
+	StringBuilder sb;
+
+	@Before
+	public void beforeTest() {
+		sb = new StringBuilder("123");
+	}
+
 	@Test
 	public void checkCharAt() {
-		StringBuilder sb = new StringBuilder("123");
 		assertTrue(sb.charAt(0) == '1');
 		assertTrue(sb.charAt(1) == '2');
 		assertTrue(sb.charAt(2) == '3');
@@ -17,7 +24,6 @@ public class IndexOps {
 
 	@Test
 	public void checkIndexOfString() {
-		StringBuilder sb = new StringBuilder("123");
 		assertTrue(sb.indexOf("1") == 0);
 		assertTrue(sb.indexOf("2") == 1);
 		assertTrue(sb.indexOf("3") == 2);
@@ -26,7 +32,6 @@ public class IndexOps {
 
 	@Test
 	public void checkIndexOfStringFromIndex() {
-		StringBuilder sb = new StringBuilder("123");
 		assertTrue(sb.indexOf("1", 1) == -1);
 		assertTrue(sb.indexOf("2", 1) == 1);
 		assertTrue(sb.indexOf("3", 1) == 2);
@@ -35,7 +40,6 @@ public class IndexOps {
 
 	@Test
 	public void checkSubstring() {
-		StringBuilder sb = new StringBuilder("123");
 		assertEquals(sb.substring(0), "123");
 		assertEquals(sb.substring(1), "23");
 		assertEquals(sb.substring(2), "3");
@@ -44,7 +48,6 @@ public class IndexOps {
 
 	@Test
 	public void checkSubstringUntilIndex() {
-		StringBuilder sb = new StringBuilder("123");
 		assertEquals(sb.substring(0, 3), "123");
 		assertEquals(sb.substring(0, 2), "12");
 		assertEquals(sb.substring(0, 1), "1");
@@ -53,14 +56,12 @@ public class IndexOps {
 
 	@Test
 	public void checkDeleteCharAt() {
-		StringBuilder sb = new StringBuilder("123");
 		sb.deleteCharAt(2);
 		assertEquals(sb.toString(), "12");
 	}
 
 	@Test
 	public void checkDeleteStringFromUntilIndex() {
-		StringBuilder sb = new StringBuilder("123");
 		sb.delete(0, 2);
 		assertEquals(sb.toString(), "3");
 	}
