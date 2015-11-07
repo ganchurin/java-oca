@@ -21,13 +21,6 @@ public class StringBuilderOps {
 	}
 
 	@Test
-	public void checkInsert() {
-		StringBuilder sb = new StringBuilder("StringBuilder");
-		sb.insert(13, "Mutable").insert(13, "Is");
-		assertEquals(sb.toString(), "StringBuilderIsMutable");
-	}
-
-	@Test
 	public void checkReverse() {
 		StringBuilder sb = new StringBuilder("StringBuilder");
 		sb.reverse();

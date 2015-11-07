@@ -52,6 +52,13 @@ public class IndexOps {
 	}
 
 	@Test
+	public void checkInsert() {
+		StringBuilder sb = new StringBuilder("StringBuilder");
+		sb.insert(13, "Mutable").insert(13, "Is");
+		assertEquals(sb.toString(), "StringBuilderIsMutable");
+	}
+
+	@Test
 	public void checkDeleteCharAt() {
 		StringBuilder sb = new StringBuilder("123");
 		assertEquals(sb.deleteCharAt(2).toString(), "12");
