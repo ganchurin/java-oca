@@ -50,4 +50,18 @@ public class IndexOps {
 		assertEquals(sb.substring(0, 1), "1");
 		assertEquals(sb.substring(0, 0), "");
 	}
+
+	@Test
+	public void checkDelete() {
+		StringBuilder sb = new StringBuilder("123");
+		sb.deleteCharAt(2);
+		assertEquals(sb.toString(), "12");
+	}
+
+	@Test
+	public void checkDelete2() {
+		StringBuilder sb = new StringBuilder("123");
+		sb.delete(0, 2);
+		assertEquals(sb.toString(), "3");
+	}
 }
