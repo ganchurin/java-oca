@@ -49,6 +49,7 @@ public class NewArray {
 
 		// You can even create an empty array!
 		int[] array4 = new int[0];
+		assertTrue("Length of empty array is 0", array4.length == 0);
 
 		// The same thing a little bit shorter
 		int[] array5 = {};
