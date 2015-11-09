@@ -15,14 +15,13 @@ public class NewArray {
 		int[] array2 = {1, 2, 3, 4, 5};
 
 		// Array class doesn't override 'Object.equals', therefore 'equals' checks reference equality
-		// In this example both variables refer to different objects
+		// In this example both variables refer to different objects and equality fails
 		assertFalse(array1.equals(array2));
 
-		// Even if they are identical by values
-		// (you can use util method 'Arrays.equals' to compare arrays by values)
+		// Use util method 'Arrays.equals' if you want to compare arrays by values
 		assertTrue(Arrays.equals(array1, array2));
 
-		// Let's create one more array variable and assign it 'array2' reference
+		// Let's create one more array variable and assign it 'array2'
 		int[] array3 = array2;
 
 		// Variables 'array2' and 'array3' refer to the same object
