@@ -15,7 +15,7 @@ public class ArrayListOps {
 	public void addElement() {
 		List<String> stocks = new ArrayList<>();
 
-		stocks.add("AAPL");
+		assertTrue(stocks.add("AAPL"));
 		assertEquals(stocks, asList("AAPL"));
 
 		stocks.add(0, "GOOG");
@@ -35,8 +35,9 @@ public class ArrayListOps {
 		stocks.add("AAPL");
 		assertEquals(stocks, asList("AAPL"));
 
-		String prev = stocks.set(0, "YNDX");
-		assertEquals(prev, "AAPL");
+		// Provide index and element to set
+		// Returns element previously at specified position
+		assertEquals(stocks.set(0, "YNDX"), "AAPL");
 		assertEquals(stocks, asList("YNDX"));
 
 		// throws IndexOutOfBoundsException
@@ -53,11 +54,13 @@ public class ArrayListOps {
 
 		// Provide an object to remove it from list
 		// The first matched element will be removed
-		stocks.remove("AAPL");
+		// Returns true if element was removed, otherwise - false
+		assertEquals(stocks.remove("AAPL"), true);
 		assertEquals(stocks, asList("YNDX", "AAPL"));
 
 		// Provide an integer to remove element by index
-		stocks.remove(0);
+		// Returns element previously at specified position
+		assertEquals(stocks.remove(0), "YNDX");
 		assertEquals(stocks, asList("AAPL"));
 
 		// throws IndexOutOfBoundsException
