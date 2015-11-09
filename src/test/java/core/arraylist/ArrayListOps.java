@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ArrayListOps {
 
@@ -77,5 +76,17 @@ public class ArrayListOps {
 		stocks.clear();
 		assertTrue(stocks.isEmpty());
 		assertTrue(stocks.size() == 0);
+	}
+
+	@Test
+	public void containsElement() {
+		List<String> stocks = new ArrayList<>();
+		stocks.add("AAPL");
+		stocks.add("YNDX");
+		assertEquals(stocks, asList("AAPL", "YNDX"));
+
+		assertTrue(stocks.contains("AAPL"));
+		assertTrue(stocks.contains("YNDX"));
+		assertFalse(stocks.contains("ORCL"));
 	}
 }
