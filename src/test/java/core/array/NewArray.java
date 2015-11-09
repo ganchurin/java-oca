@@ -14,7 +14,7 @@ public class NewArray {
 		int[] array1 = {1, 2, 3, 4, 5};
 		int[] array2 = {1, 2, 3, 4, 5};
 
-		// Array class doesn't override 'Object.equals', therefore 'equals' checks reference equality
+		// Array class doesn't override 'Object.equals', therefore it checks reference equality
 		// In this example both variables refer to different objects and equality fails
 		assertFalse(array1.equals(array2));
 
@@ -55,7 +55,7 @@ public class NewArray {
 		int[] array5 = {};
 
 		assertArrayEquals("Empty arrays are equal by value", array4, array5);
-		assertFalse("And different by reference equality", array4.equals(array5));
+		assertFalse("But different by reference", array4.equals(array5));
 	}
 
 	@Test
