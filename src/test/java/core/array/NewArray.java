@@ -71,11 +71,13 @@ public class NewArray {
 		assertTrue(longs[0] == 0);
 		char[] chars = new char[1];
 		assertTrue(chars[0] == 0);
+
 		// Decimal value is 0.0 by default
 		float[] floats = new float[1];
 		assertTrue(floats[0] == 0.0);
 		double[] doubles = new double[1];
 		assertTrue(doubles[0] == 0.0);
+
 		// Boolean value is false by default
 		boolean[] booleans = new boolean[1];
 		assertFalse(booleans[0]);
