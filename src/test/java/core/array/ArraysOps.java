@@ -27,6 +27,7 @@ public class ArraysOps {
 
 	@Test
 	public void searchIntInSortedArray() {
+		// You should sort array before binary searching
 		int[] arr = {1, 10, 100, 1000};
 		assertTrue(binarySearch(arr, 1) == 0);
 		assertTrue(binarySearch(arr, 10) == 1);

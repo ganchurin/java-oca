@@ -60,19 +60,30 @@ public class NewArray {
 
 	@Test
 	public void checkDefaultPrimitiveValues() {
-		int size = 10;
-		int[] a = new int[size];
-		for (int e : a) {
-			assertTrue(e == 0);
-		}
+		// Integer value is 0 by default
+		byte[] bytes = new byte[1];
+		assertTrue(bytes[0] == 0);
+		short[] shorts = new short[1];
+		assertTrue(shorts[0] == 0);
+		int[] ints = new int[1];
+		assertTrue(ints[0] == 0);
+		long[] longs = new long[1];
+		assertTrue(longs[0] == 0);
+		char[] chars = new char[1];
+		assertTrue(chars[0] == 0);
+		// Decimal value is 0.0 by default
+		float[] floats = new float[1];
+		assertTrue(floats[0] == 0.0);
+		double[] doubles = new double[1];
+		assertTrue(doubles[0] == 0.0);
+		// Boolean value is false by default
+		boolean[] booleans = new boolean[1];
+		assertFalse(booleans[0]);
 	}
 
 	@Test
 	public void checkDefaultObjectValues() {
-		int size = 10;
-		Object[] a = new Object[size];
-		for (Object e : a) {
-			assertTrue(e == null);
-		}
+		Object[] objects = new Object[1];
+		assertTrue(objects[0] == null);
 	}
 }
