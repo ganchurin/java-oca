@@ -59,7 +59,7 @@ public class NewArray {
 	}
 
 	@Test
-	public void checkDefaultPrimitiveValues() {
+	public void checkPrimitiveTypeArrayDefaultValues() {
 		// Integer value is 0 by default
 		byte[] bytes = new byte[1];
 		assertTrue(bytes[0] == 0);
@@ -82,7 +82,7 @@ public class NewArray {
 	}
 
 	@Test
-	public void checkDefaultObjectValues() {
+	public void checkObjectTypeArrayDefaultValues() {
 		Object[] objects = new Object[1];
 		assertTrue(objects[0] == null);
 	}
