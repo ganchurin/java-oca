@@ -10,18 +10,19 @@ public class NewArray {
 
 	@Test
 	public void checkArrayEquality() {
-		// Let's create two arrays identical by values inside of them
+		// Let's create two arrays identical by values
 		int[] array1 = {1, 2, 3, 4, 5};
 		int[] array2 = {1, 2, 3, 4, 5};
 
-		// Array class doesn't override 'Object.equals' method, therefore comparison uses references to objects
-		// In fact both variables refer to different objects, even they are identical inside
+		// Array class doesn't override 'Object.equals', therefore 'equals' checks reference equality
+		// In this example both variables refer to different objects
 		assertFalse(array1.equals(array2));
 
-		// You can use 'Arrays.equals' to compare arrays by values
+		// Even if they are identical by values
+		// (you can use util method 'Arrays.equals' to compare arrays by values)
 		assertTrue(Arrays.equals(array1, array2));
 
-		// Let's create one more array which refers to array object behind 'array2' variable
+		// Let's create one more array variable and assign it 'array2' reference
 		int[] array3 = array2;
 
 		// Variables 'array2' and 'array3' refer to the same object
