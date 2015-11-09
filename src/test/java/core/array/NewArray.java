@@ -83,6 +83,7 @@ public class NewArray {
 
 	@Test
 	public void checkObjectTypeArrayDefaultValues() {
+		// Object value is null by default
 		Object[] objects = new Object[1];
 		assertTrue(objects[0] == null);
 	}
