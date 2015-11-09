@@ -54,7 +54,8 @@ public class NewArray {
 		// The same thing a little bit shorter
 		int[] array5 = {};
 
-		assertArrayEquals(array4, array5);
+		assertArrayEquals("Empty arrays are equal by value", array4, array5);
+		assertFalse("And different by reference equality", array4.equals(array5));
 	}
 
 	@Test
