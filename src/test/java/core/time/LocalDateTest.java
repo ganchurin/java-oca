@@ -3,6 +3,7 @@ package core.time;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Month;
 
 import static org.junit.Assert.assertEquals;
@@ -47,5 +48,23 @@ public class LocalDateTest {
 		assertEquals(d.minusMonths(2), LocalDate.of(2015, 8, 30));
 		assertEquals(d.minusWeeks(3), LocalDate.of(2015, 10, 9));
 		assertEquals(d.minusDays(4), LocalDate.of(2015, 10, 26));
+	}
+
+	@Test
+	public void checkChainCalls() {
+		// Perform operations on LocalDate in chain
+		LocalDate d = LocalDate.of(2015, 10, 30);
+		assertEquals(d.plusYears(10).minusMonths(10), LocalDate.of(2024, 12, 30));
+	}
+
+	@Test
+	public void checkImmutability() {
+		// LocalDate objects are immutable
+		// Operations on LocalDate objects produce new LocalDate objects
+		LocalDate d = LocalDate.of(2015, 10, 30);
+		// If you want to save result of operation on LocalDate object,
+		// then do not forget to assign new value to a reference
+		d.plusYears(10).minusMonths(10);
+		assertEquals(d, LocalDate.of(2015, 10, 30));
 	}
 }
