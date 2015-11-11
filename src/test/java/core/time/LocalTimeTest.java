@@ -16,13 +16,16 @@ public class LocalTimeTest {
 
 	@Test
 	public void createCustomTime() {
-		// Use static method 'of' to create custom time object
+		// Use static methods 'of' to create custom time objects
+		// Set hour and minutes
 		LocalTime t1 = LocalTime.of(10, 30);
 		checkTime(t1, 10, 30, 0, 0);
 
+		// Set hour, minutes and seconds
 		LocalTime t2 = LocalTime.of(10, 30, 15);
 		checkTime(t2, 10, 30, 15, 0);
 
+		// Set hour, minutes, seconds and nanoseconds
 		LocalTime t3 = LocalTime.of(10, 30, 15, 100);
 		checkTime(t3, 10, 30, 15, 100);
 	}
@@ -36,6 +39,7 @@ public class LocalTimeTest {
 
 	@Test
 	public void checkPlusTime() {
+		// Add hours, minutes, seconds or nanoseconds
 		LocalTime t = LocalTime.of(10, 30);
 		assertEquals(t.plusHours(10), LocalTime.of(20, 30));
 		assertEquals(t.plusMinutes(10), LocalTime.of(10, 40));
@@ -45,6 +49,7 @@ public class LocalTimeTest {
 
 	@Test
 	public void checkMinusTime() {
+		// Subtract hours, minutes, seconds or nanoseconds
 		LocalTime t = LocalTime.of(10, 30);
 		assertEquals(t.minusHours(10), LocalTime.of(0, 30));
 		assertEquals(t.minusMinutes(10), LocalTime.of(10, 20));
