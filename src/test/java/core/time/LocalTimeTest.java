@@ -17,21 +17,21 @@ public class LocalTimeTest {
 	@Test
 	public void createCustomTime() {
 		// Use static method 'of' to create custom time object
-		LocalTime time1 = LocalTime.of(10, 30);
-		checkTime(time1, 10, 30, 0, 0);
+		LocalTime t1 = LocalTime.of(10, 30);
+		checkTime(t1, 10, 30, 0, 0);
 
-		LocalTime time2 = LocalTime.of(10, 30, 15);
-		checkTime(time2, 10, 30, 15, 0);
+		LocalTime t2 = LocalTime.of(10, 30, 15);
+		checkTime(t2, 10, 30, 15, 0);
 
-		LocalTime time3 = LocalTime.of(10, 30, 15, 100);
-		checkTime(time3, 10, 30, 15, 100);
+		LocalTime t3 = LocalTime.of(10, 30, 15, 100);
+		checkTime(t3, 10, 30, 15, 100);
 	}
 
-	private void checkTime(LocalTime t, int hour, int minute, int second, long nano) {
-		assertEquals(t.getHour(), hour);
-		assertEquals(t.getMinute(), minute);
-		assertEquals(t.getSecond(), second);
-		assertEquals(t.getNano(), nano);
+	private void checkTime(LocalTime time, int hour, int minute, int second, long nano) {
+		assertEquals(time.getHour(), hour);
+		assertEquals(time.getMinute(), minute);
+		assertEquals(time.getSecond(), second);
+		assertEquals(time.getNano(), nano);
 	}
 
 	@Test
