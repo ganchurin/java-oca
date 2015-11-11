@@ -56,4 +56,22 @@ public class LocalTimeTest {
 		assertEquals(t.minusSeconds(10), LocalTime.of(10, 29, 50));
 		assertEquals(t.minusNanos(1000), LocalTime.of(10, 29, 59, 999999000));
 	}
+
+	@Test
+	public void checkChainCalls() {
+		// Perform operations on LocalTime in chain
+		LocalTime t = LocalTime.of(10, 30);
+		assertEquals(t.plusHours(10).minusMinutes(10), LocalTime.of(20, 20));
+	}
+
+	@Test
+	public void checkImmutability() {
+		// LocalTime objects are immutable
+		// Operations on LocalTime objects produce new LocalTime objects
+		LocalTime t = LocalTime.of(10, 30);
+		// If you want to save result of operation on LocalTime object,
+		// then do not forget to assign new value to a reference
+		t.plusHours(10).minusMinutes(10);
+		assertEquals(t, LocalTime.of(10, 30));
+	}
 }
