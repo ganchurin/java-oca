@@ -10,7 +10,7 @@ public class LocalTimeTest {
 
 	@Test
 	public void createCurrentTime() {
-		// Use static method 'now' to create time object with current time
+		// Use static method 'now' to create new time object with current time
 		LocalTime time = LocalTime.now();
 	}
 
