@@ -16,7 +16,7 @@ public class LocalTimeTest {
 
 	@Test
 	public void createCustomTime() {
-		// Use static methods 'of' to create custom time objects
+		// Use static method 'of' to create new custom time object
 		// Set hour and minutes
 		LocalTime t1 = LocalTime.of(10, 30);
 		checkTime(t1, 10, 30, 0, 0);

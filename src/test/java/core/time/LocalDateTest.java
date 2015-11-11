@@ -12,13 +12,13 @@ public class LocalDateTest {
 
 	@Test
 	public void createCurrentDate() {
-		// Use static method 'now' to create new date object with current time
+		// Use static method 'now' to create new date object with current date
 		LocalDate date = LocalDate.now();
 	}
 
 	@Test
 	public void createCustomDate() {
-		// Use static methods 'of' to create custom date objects
+		// Use static method 'of' to create new custom date object
 		// Set year, month index and day of month
 		LocalDate d1 = LocalDate.of(2015, 10, 30);
 		assertEquals(d1.getYear(), 2015);
