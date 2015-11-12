@@ -2,7 +2,9 @@ package core.time;
 
 import org.junit.Test;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
 
 import static org.junit.Assert.assertEquals;
@@ -35,6 +37,11 @@ public class LocalDateTimeTest {
 
 		LocalDateTime t6 = LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15, 1000);
 		checkDateTime(t6, 2015, Month.OCTOBER, 30, 10, 30, 15, 1000);
+
+		LocalDate date = LocalDate.of(2015, Month.OCTOBER, 30);
+		LocalTime time = LocalTime.of(10, 30, 15, 1000);
+		LocalDateTime t7 = LocalDateTime.of(date, time);
+		checkDateTime(t7, 2015, Month.OCTOBER, 30, 10, 30, 15, 1000);
 	}
 
 	private void checkDateTime(LocalDateTime time, int year, int month, int day, int hour, int minute, int second, long nano) {
