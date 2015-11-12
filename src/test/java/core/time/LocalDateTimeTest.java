@@ -38,18 +38,17 @@ public class LocalDateTimeTest {
 	}
 
 	private void checkDateTime(LocalDateTime time, int year, int month, int day, int hour, int minute, int second, long nano) {
-		assertEquals(time.getYear(), year);
+		checkExceptMonth(time, year, day, hour, minute, second, nano);
 		assertEquals(time.getMonthValue(), month);
-		assertEquals(time.getDayOfMonth(), day);
-		assertEquals(time.getHour(), hour);
-		assertEquals(time.getMinute(), minute);
-		assertEquals(time.getSecond(), second);
-		assertEquals(time.getNano(), nano);
 	}
 
 	private void checkDateTime(LocalDateTime time, int year, Month month, int day, int hour, int minute, int second, long nano) {
-		assertEquals(time.getYear(), year);
+		checkExceptMonth(time, year, day, hour, minute, second, nano);
 		assertEquals(time.getMonth(), month);
+	}
+
+	private void checkExceptMonth(LocalDateTime time, int year, int day, int hour, int minute, int second, long nano) {
+		assertEquals(time.getYear(), year);
 		assertEquals(time.getDayOfMonth(), day);
 		assertEquals(time.getHour(), hour);
 		assertEquals(time.getMinute(), minute);
