@@ -20,15 +20,17 @@ public class LocalDateTest {
 		// Use static method 'of' to create new custom date object
 		// Set year, month index and day of month
 		LocalDate d1 = LocalDate.of(2015, 10, 30);
-		assertEquals(d1.getYear(), 2015);
-		assertEquals(d1.getMonthValue(), 10);
-		assertEquals(d1.getDayOfMonth(), 30);
+		checkDate(d1, 2015, Month.OCTOBER, 30);
 
 		// Set year, month and day of month
 		LocalDate d2 = LocalDate.of(2015, Month.OCTOBER, 30);
-		assertEquals(d2.getYear(), 2015);
-		assertEquals(d2.getMonth(), Month.OCTOBER);
-		assertEquals(d2.getDayOfMonth(), 30);
+		checkDate(d2, 2015, Month.OCTOBER, 30);
+	}
+
+	private void checkDate(LocalDate date, int year, Month month, int day) {
+		assertEquals(date.getYear(), year);
+		assertEquals(date.getMonth(), month);
+		assertEquals(date.getDayOfMonth(), day);
 	}
 
 	@Test
