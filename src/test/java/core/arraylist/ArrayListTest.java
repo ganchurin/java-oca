@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class NewArrayList {
+public class ArrayListTest {
 
 	@Test
 	public void createArrayList() {

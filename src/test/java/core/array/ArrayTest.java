@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
-public class NewArray {
+public class ArrayTest {
 
 	@Test
 	public void checkArrayEquality() {
