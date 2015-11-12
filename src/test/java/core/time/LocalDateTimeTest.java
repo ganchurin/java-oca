@@ -21,13 +21,13 @@ public class LocalDateTimeTest {
 	public void createCustomDateTime() {
 		// Use static method 'of' to create new custom date time object
 		LocalDateTime t1 = LocalDateTime.of(2015, 10, 30, 10, 30);
-		checkDateTime(t1, 2015, 10, 30, 10, 30, 0, 0);
+		checkDateTime(t1, 2015, Month.OCTOBER, 30, 10, 30, 0, 0);
 
 		LocalDateTime t2 = LocalDateTime.of(2015, 10, 30, 10, 30, 15);
-		checkDateTime(t2, 2015, 10, 30, 10, 30, 15, 0);
+		checkDateTime(t2, 2015, Month.OCTOBER, 30, 10, 30, 15, 0);
 
 		LocalDateTime t3 = LocalDateTime.of(2015, 10, 30, 10, 30, 15, 1000);
-		checkDateTime(t3, 2015, 10, 30, 10, 30, 15, 1000);
+		checkDateTime(t3, 2015, Month.OCTOBER, 30, 10, 30, 15, 1000);
 
 		LocalDateTime t4 = LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30);
 		checkDateTime(t4, 2015, Month.OCTOBER, 30, 10, 30, 0, 0);
@@ -44,18 +44,9 @@ public class LocalDateTimeTest {
 		checkDateTime(t7, 2015, Month.OCTOBER, 30, 10, 30, 15, 1000);
 	}
 
-	private void checkDateTime(LocalDateTime time, int year, int month, int day, int hour, int minute, int second, long nano) {
-		checkExceptMonth(time, year, day, hour, minute, second, nano);
-		assertEquals(time.getMonthValue(), month);
-	}
-
 	private void checkDateTime(LocalDateTime time, int year, Month month, int day, int hour, int minute, int second, long nano) {
-		checkExceptMonth(time, year, day, hour, minute, second, nano);
-		assertEquals(time.getMonth(), month);
-	}
-
-	private void checkExceptMonth(LocalDateTime time, int year, int day, int hour, int minute, int second, long nano) {
 		assertEquals(time.getYear(), year);
+		assertEquals(time.getMonth(), month);
 		assertEquals(time.getDayOfMonth(), day);
 		assertEquals(time.getHour(), hour);
 		assertEquals(time.getMinute(), minute);
