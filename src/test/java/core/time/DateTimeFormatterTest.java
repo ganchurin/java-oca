@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.Month;
 import java.time.format.DateTimeFormatter;
 
 import static org.junit.Assert.assertEquals;
@@ -14,7 +15,7 @@ public class DateTimeFormatterTest {
 	@Test
 	public void formatDate() {
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
-		LocalDate date = LocalDate.of(2015, 10, 30);
+		LocalDate date = LocalDate.of(2015, Month.OCTOBER, 30);
 		// Format date from formatter or from date
 		assertEquals(formatter.format(date), "2015-10-30");
 		assertEquals(date.format(formatter), "2015-10-30");
@@ -32,9 +33,27 @@ public class DateTimeFormatterTest {
 	@Test
 	public void formatDateTime() {
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
-		LocalDateTime dateTime = LocalDateTime.of(2015, 10, 30, 10, 30, 15, 1000);
+		LocalDateTime dateTime = LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15, 1000);
 		// Format dateTime from formatter or from dateTime
 		assertEquals(formatter.format(dateTime), "2015-10-30T10:30:15.000001");
 		assertEquals(dateTime.format(formatter), "2015-10-30T10:30:15.000001");
+	}
+
+	@Test
+	public void parseDate() {
+		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
+		assertEquals(LocalDate.parse("2015-10-30", formatter), LocalDate.of(2015, Month.OCTOBER, 30));
+	}
+
+	@Test
+	public void parseTime() {
+		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_TIME;
+		assertEquals(LocalTime.parse("10:30:15", formatter), LocalTime.of(10, 30, 15));
+	}
+
+	@Test
+	public void parseDateTime() {
+		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+		assertEquals(LocalDateTime.parse("2015-10-30T10:30:15", formatter), LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15));
 	}
 }
