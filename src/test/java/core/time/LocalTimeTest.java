@@ -17,15 +17,15 @@ public class LocalTimeTest {
 	@Test
 	public void createCustomTime() {
 		// Use static method 'of' to create new custom time object
-		// Set hour and minutes
+		// Set hours and minutes
 		LocalTime t1 = LocalTime.of(10, 30);
 		checkTime(t1, 10, 30, 0, 0);
 
-		// Set hour, minutes and seconds
+		// Set hours, minutes and seconds
 		LocalTime t2 = LocalTime.of(10, 30, 15);
 		checkTime(t2, 10, 30, 15, 0);
 
-		// Set hour, minutes, seconds and nanoseconds
+		// Set hours, minutes, seconds and nanoseconds
 		LocalTime t3 = LocalTime.of(10, 30, 15, 1000);
 		checkTime(t3, 10, 30, 15, 1000);
 	}
