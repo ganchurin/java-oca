@@ -26,8 +26,8 @@ public class LocalTimeTest {
 		checkTime(t2, 10, 30, 15, 0);
 
 		// Set hour, minutes, seconds and nanoseconds
-		LocalTime t3 = LocalTime.of(10, 30, 15, 100);
-		checkTime(t3, 10, 30, 15, 100);
+		LocalTime t3 = LocalTime.of(10, 30, 15, 1000);
+		checkTime(t3, 10, 30, 15, 1000);
 	}
 
 	private void checkTime(LocalTime time, int hour, int minute, int second, long nano) {
