@@ -8,7 +8,7 @@ import java.util.List;
 import static java.util.Arrays.asList;
 import static org.junit.Assert.*;
 
-public class ArrayListOps {
+public class ArrayListOpsTest {
 
 	@Test
 	public void addElement() {
