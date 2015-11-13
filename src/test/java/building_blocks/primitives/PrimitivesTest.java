@@ -15,7 +15,7 @@ public class PrimitivesTest {
 
 	@Test
 	public void createBytePrimitive() {
-		byte b1 = 127;    // You can assign integer literal
+		byte b1 = 100;    // You can assign integer literal
 		byte b2 = BYTE;    // OK
 
 		// Assignments below do not compile
@@ -30,7 +30,7 @@ public class PrimitivesTest {
 
 	@Test
 	public void createShortPrimitive() {
-		short s1 = 32767;    // You can assign integer literal
+		short s1 = 100;    // You can assign integer literal
 		short s2 = BYTE;    // OK
 		short s3 = SHORT;    // OK
 
@@ -41,5 +41,35 @@ public class PrimitivesTest {
 		// short s7 = DOUBLE;    // You can't assign decimal value to integer primitive
 		// short s8 = BOOLEAN;    // You can't assign boolean value to integer primitive
 		// short s9 = CHAR;    // Possible loss of precision
+	}
+
+	@Test
+	public void createIntPrimitive() {
+		int i1 = 100;    // You can assign integer literal
+		int i2 = BYTE;    // OK
+		int i3 = SHORT;    // OK
+		int i4 = INT;    // OK
+		int i9 = CHAR;    // OK
+
+		// Assignments below do not compile
+		// int i5 = LONG;    // Possible loss of precision
+		// int i6 = FLOAT;    // You can't assign decimal value to integer primitive
+		// int i7 = DOUBLE;    // You can't assign decimal value to integer primitive
+		// int i8 = BOOLEAN;    // You can't assign boolean value to integer primitive
+	}
+
+	@Test
+	public void createLongPrimitive() {
+		long l1 = 100;    // You can assign integer literal
+		long l2 = BYTE;    // OK
+		long l3 = SHORT;    // OK
+		long l4 = INT;    // OK
+		long l5 = LONG;    // OK
+		long l9 = CHAR;    // OK
+
+		// Assignments below do not compile
+		// long l6 = FLOAT;    // You can't assign decimal value to integer primitive
+		// long l7 = DOUBLE;    // You can't assign decimal value to integer primitive
+		// long l8 = BOOLEAN;    // You can't assign boolean value to integer primitive
 	}
 }
