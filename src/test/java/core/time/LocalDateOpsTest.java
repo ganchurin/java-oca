@@ -3,6 +3,7 @@ package core.time;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,6 +25,20 @@ public class LocalDateOpsTest {
 		assertEquals(d.minusMonths(2), LocalDate.of(2015, 8, 30));
 		assertEquals(d.minusWeeks(3), LocalDate.of(2015, 10, 9));
 		assertEquals(d.minusDays(4), LocalDate.of(2015, 10, 26));
+	}
+
+	@Test
+	public void checkPlusPeriod() {
+		LocalDate d = LocalDate.of(2015, 10, 30);
+		Period p = Period.of(10, 12, 10);
+		assertEquals(d.plus(p), LocalDate.of(2026, 11, 9));
+	}
+
+	@Test
+	public void checkMinusPeriod() {
+		LocalDate d = LocalDate.of(2015, 10, 30);
+		Period p = Period.of(10, 12, 10);
+		assertEquals(d.minus(p), LocalDate.of(2004, 10, 20));
 	}
 
 	@Test
