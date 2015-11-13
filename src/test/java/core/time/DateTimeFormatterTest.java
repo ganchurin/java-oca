@@ -54,6 +54,7 @@ public class DateTimeFormatterTest {
 	@Test
 	public void parseDateTime() {
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
-		assertEquals(LocalDateTime.parse("2015-10-30T10:30:15", formatter), LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15));
+		LocalDateTime dateTime = LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15);
+		assertEquals(LocalDateTime.parse("2015-10-30T10:30:15", formatter), dateTime);
 	}
 }
