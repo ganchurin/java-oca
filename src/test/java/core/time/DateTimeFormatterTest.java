@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
 
@@ -56,5 +57,19 @@ public class DateTimeFormatterTest {
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 		LocalDateTime dateTime = LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15);
 		assertEquals(LocalDateTime.parse("2015-10-30T10:30:15", formatter), dateTime);
+	}
+
+	@Test
+	public void formatDateWithCustomFormatter() {
+		LocalDate date = LocalDate.of(2016, Month.JANUARY, 1);
+		checkDateCustomFormatter(date, "yy/M/d", "16/1/1");
+		checkDateCustomFormatter(date, "yy/M/dd", "16/1/01");
+		checkDateCustomFormatter(date, "yy/MM/dd", "16/01/01");
+		checkDateCustomFormatter(date, "yyyy/MMM/dd", "2016/Jan/01");
+	}
+
+	private void checkDateCustomFormatter(LocalDate date, String pattern, String expected) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+		assertEquals(date.format(formatter), expected);
 	}
 }
