@@ -44,13 +44,13 @@ public class DateTimeFormatTest {
 	public void formatDateWithCustomFormatter() {
 		LocalDate date = LocalDate.of(2016, Month.JANUARY, 1);
 
-		checkDateCustomFormatter(date, "yy/M/d", "16/1/1");
-		checkDateCustomFormatter(date, "yy/M/dd", "16/1/01");
-		checkDateCustomFormatter(date, "yy/MM/dd", "16/01/01");
-		checkDateCustomFormatter(date, "yyyy/MMM/dd", "2016/Jan/01");
+		checkDateCustomFormat(date, "yy/M/d", "16/1/1");
+		checkDateCustomFormat(date, "yy/M/dd", "16/1/01");
+		checkDateCustomFormat(date, "yy/MM/dd", "16/01/01");
+		checkDateCustomFormat(date, "yyyy/MMM/dd", "2016/Jan/01");
 	}
 
-	private void checkDateCustomFormatter(LocalDate date, String pattern, String expected) {
+	private void checkDateCustomFormat(LocalDate date, String pattern, String expected) {
 		DateTimeFormatter formatter = customLocalFormatter(pattern);
 		assertEquals(date.format(formatter), expected);
 	}
@@ -59,15 +59,15 @@ public class DateTimeFormatTest {
 	public void formatTimeWithCustomFormatter() {
 		LocalTime time = LocalTime.of(1, 5, 5, 1000);
 
-		checkCustomTimeFormatter(time, "h:m:s", "1:5:5");
-		checkCustomTimeFormatter(time, "h:m:ss", "1:5:05");
-		checkCustomTimeFormatter(time, "h:mm:ss", "1:05:05");
-		checkCustomTimeFormatter(time, "hh:mm:ss", "01:05:05");
-		checkCustomTimeFormatter(time, "hh:mm:ss.SSS", "01:05:05.000");
-		checkCustomTimeFormatter(time, "hh:mm:ss.SSSSSS", "01:05:05.000001");
+		checkTimeCustomFormat(time, "h:m:s", "1:5:5");
+		checkTimeCustomFormat(time, "h:m:ss", "1:5:05");
+		checkTimeCustomFormat(time, "h:mm:ss", "1:05:05");
+		checkTimeCustomFormat(time, "hh:mm:ss", "01:05:05");
+		checkTimeCustomFormat(time, "hh:mm:ss.SSS", "01:05:05.000");
+		checkTimeCustomFormat(time, "hh:mm:ss.SSSSSS", "01:05:05.000001");
 	}
 
-	private void checkCustomTimeFormatter(LocalTime time, String pattern, String expected) {
+	private void checkTimeCustomFormat(LocalTime time, String pattern, String expected) {
 		DateTimeFormatter formatter = customLocalFormatter(pattern);
 		assertEquals(time.format(formatter), expected);
 	}
@@ -76,19 +76,19 @@ public class DateTimeFormatTest {
 	public void formatDateTimeWithCustomFormatter() {
 		LocalDateTime dateTime = LocalDateTime.of(2016, Month.JANUARY, 1, 1, 5, 5, 1000);
 
-		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:m:s", "16/1/1 1:5:5");
-		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:m:ss", "16/1/1 1:5:05");
-		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:mm:ss", "16/1/1 1:05:05");
-		checkCustomDateTimeFormatter(dateTime, "yy/M/d hh:mm:ss", "16/1/1 01:05:05");
-		checkCustomDateTimeFormatter(dateTime, "yy/M/dd hh:mm:ss", "16/1/01 01:05:05");
-		checkCustomDateTimeFormatter(dateTime, "yy/MM/dd hh:mm:ss", "16/01/01 01:05:05");
-		checkCustomDateTimeFormatter(dateTime, "yy/MMM/dd hh:mm:ss", "16/Jan/01 01:05:05");
-		checkCustomDateTimeFormatter(dateTime, "yyyy/MMM/dd hh:mm:ss", "2016/Jan/01 01:05:05");
-		checkCustomDateTimeFormatter(dateTime, "yyyy/MMM/dd hh:mm:ss.SSS", "2016/Jan/01 01:05:05.000");
-		checkCustomDateTimeFormatter(dateTime, "yyyy/MMM/dd hh:mm:ss.SSSSSS", "2016/Jan/01 01:05:05.000001");
+		checkDateTimeCustomFormat(dateTime, "yy/M/d h:m:s", "16/1/1 1:5:5");
+		checkDateTimeCustomFormat(dateTime, "yy/M/d h:m:ss", "16/1/1 1:5:05");
+		checkDateTimeCustomFormat(dateTime, "yy/M/d h:mm:ss", "16/1/1 1:05:05");
+		checkDateTimeCustomFormat(dateTime, "yy/M/d hh:mm:ss", "16/1/1 01:05:05");
+		checkDateTimeCustomFormat(dateTime, "yy/M/dd hh:mm:ss", "16/1/01 01:05:05");
+		checkDateTimeCustomFormat(dateTime, "yy/MM/dd hh:mm:ss", "16/01/01 01:05:05");
+		checkDateTimeCustomFormat(dateTime, "yy/MMM/dd hh:mm:ss", "16/Jan/01 01:05:05");
+		checkDateTimeCustomFormat(dateTime, "yyyy/MMM/dd hh:mm:ss", "2016/Jan/01 01:05:05");
+		checkDateTimeCustomFormat(dateTime, "yyyy/MMM/dd hh:mm:ss.SSS", "2016/Jan/01 01:05:05.000");
+		checkDateTimeCustomFormat(dateTime, "yyyy/MMM/dd hh:mm:ss.SSSSSS", "2016/Jan/01 01:05:05.000001");
 	}
 
-	private void checkCustomDateTimeFormatter(LocalDateTime dateTime, String pattern, String expected) {
+	private void checkDateTimeCustomFormat(LocalDateTime dateTime, String pattern, String expected) {
 		DateTimeFormatter formatter = customLocalFormatter(pattern);
 		assertEquals(dateTime.format(formatter), expected);
 	}
