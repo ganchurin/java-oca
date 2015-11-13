@@ -11,7 +11,7 @@ import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
 
-public class DateTimeFormatterTest {
+public class DateTimeFormatTest {
 
 	@Test
 	public void formatDateWithISOFormatter() {
@@ -38,25 +38,6 @@ public class DateTimeFormatterTest {
 		// Format dateTime from formatter or from dateTime
 		assertEquals(formatter.format(dateTime), "2015-10-30T10:30:15.000001");
 		assertEquals(dateTime.format(formatter), "2015-10-30T10:30:15.000001");
-	}
-
-	@Test
-	public void parseDate() {
-		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
-		assertEquals(LocalDate.parse("2015-10-30", formatter), LocalDate.of(2015, Month.OCTOBER, 30));
-	}
-
-	@Test
-	public void parseTime() {
-		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_TIME;
-		assertEquals(LocalTime.parse("10:30:15", formatter), LocalTime.of(10, 30, 15));
-	}
-
-	@Test
-	public void parseDateTime() {
-		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
-		LocalDateTime dateTime = LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15);
-		assertEquals(LocalDateTime.parse("2015-10-30T10:30:15", formatter), dateTime);
 	}
 
 	@Test
