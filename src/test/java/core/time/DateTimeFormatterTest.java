@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class DateTimeFormatterTest {
 
 	@Test
-	public void formatDate() {
+	public void formatDateWithISOFormatter() {
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
 		LocalDate date = LocalDate.of(2015, Month.OCTOBER, 30);
 		// Format date from formatter or from date
@@ -23,7 +23,7 @@ public class DateTimeFormatterTest {
 	}
 
 	@Test
-	public void formatTime() {
+	public void formatTimeWithISOFormatter() {
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_TIME;
 		LocalTime time = LocalTime.of(10, 30, 15, 1000);
 		// Format time from formatter or from time
@@ -32,7 +32,7 @@ public class DateTimeFormatterTest {
 	}
 
 	@Test
-	public void formatDateTime() {
+	public void formatDateTimeWithISOFormatter() {
 		DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 		LocalDateTime dateTime = LocalDateTime.of(2015, Month.OCTOBER, 30, 10, 30, 15, 1000);
 		// Format dateTime from formatter or from dateTime
