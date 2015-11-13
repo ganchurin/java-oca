@@ -72,4 +72,20 @@ public class DateTimeFormatterTest {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
 		assertEquals(date.format(formatter), expected);
 	}
+
+	@Test
+	public void formatTimeWithCustomFormatter() {
+		LocalTime time = LocalTime.of(1, 5, 5, 1000);
+		checkCustomTimeFormatter(time, "h:m:s", "1:5:5");
+		checkCustomTimeFormatter(time, "h:m:ss", "1:5:05");
+		checkCustomTimeFormatter(time, "h:mm:ss", "1:05:05");
+		checkCustomTimeFormatter(time, "hh:mm:ss", "01:05:05");
+		checkCustomTimeFormatter(time, "hh:mm:ss.SSS", "01:05:05.000");
+		checkCustomTimeFormatter(time, "hh:mm:ss.SSSSSS", "01:05:05.000001");
+	}
+
+	private void checkCustomTimeFormatter(LocalTime time, String pattern, String expected) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+		assertEquals(time.format(formatter), expected);
+	}
 }
