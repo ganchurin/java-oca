@@ -43,6 +43,7 @@ public class DateTimeFormatTest {
 	@Test
 	public void formatDateWithCustomFormatter() {
 		LocalDate date = LocalDate.of(2016, Month.JANUARY, 1);
+
 		checkDateCustomFormatter(date, "yy/M/d", "16/1/1");
 		checkDateCustomFormatter(date, "yy/M/dd", "16/1/01");
 		checkDateCustomFormatter(date, "yy/MM/dd", "16/01/01");
@@ -57,6 +58,7 @@ public class DateTimeFormatTest {
 	@Test
 	public void formatTimeWithCustomFormatter() {
 		LocalTime time = LocalTime.of(1, 5, 5, 1000);
+
 		checkCustomTimeFormatter(time, "h:m:s", "1:5:5");
 		checkCustomTimeFormatter(time, "h:m:ss", "1:5:05");
 		checkCustomTimeFormatter(time, "h:mm:ss", "1:05:05");
@@ -73,6 +75,7 @@ public class DateTimeFormatTest {
 	@Test
 	public void formatDateTimeWithCustomFormatter() {
 		LocalDateTime dateTime = LocalDateTime.of(2016, Month.JANUARY, 1, 1, 5, 5, 1000);
+
 		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:m:s", "16/1/1 1:5:5");
 		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:m:ss", "16/1/1 1:5:05");
 		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:mm:ss", "16/1/1 1:05:05");
