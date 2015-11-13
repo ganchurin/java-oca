@@ -11,7 +11,7 @@ import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
 
-public class DateTimeFormatTest {
+public class DateTimeFormatter_FormatTest {
 
 	@Test
 	public void formatDateWithISOFormatter() {

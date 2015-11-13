@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 import static org.junit.Assert.assertEquals;
 
-public class DateTimeParseTest {
+public class DateTimeFormatter_ParseTest {
 
 	@Test
 	public void parseDate() {
