@@ -88,4 +88,24 @@ public class DateTimeFormatterTest {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
 		assertEquals(time.format(formatter), expected);
 	}
+
+	@Test
+	public void formatDateTimeWithCustomFormatter() {
+		LocalDateTime dateTime = LocalDateTime.of(2016, Month.JANUARY, 1, 1, 5, 5, 1000);
+		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:m:s", "16/1/1 1:5:5");
+		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:m:ss", "16/1/1 1:5:05");
+		checkCustomDateTimeFormatter(dateTime, "yy/M/d h:mm:ss", "16/1/1 1:05:05");
+		checkCustomDateTimeFormatter(dateTime, "yy/M/d hh:mm:ss", "16/1/1 01:05:05");
+		checkCustomDateTimeFormatter(dateTime, "yy/M/dd hh:mm:ss", "16/1/01 01:05:05");
+		checkCustomDateTimeFormatter(dateTime, "yy/MM/dd hh:mm:ss", "16/01/01 01:05:05");
+		checkCustomDateTimeFormatter(dateTime, "yy/MMM/dd hh:mm:ss", "16/Jan/01 01:05:05");
+		checkCustomDateTimeFormatter(dateTime, "yyyy/MMM/dd hh:mm:ss", "2016/Jan/01 01:05:05");
+		checkCustomDateTimeFormatter(dateTime, "yyyy/MMM/dd hh:mm:ss.SSS", "2016/Jan/01 01:05:05.000");
+		checkCustomDateTimeFormatter(dateTime, "yyyy/MMM/dd hh:mm:ss.SSSSSS", "2016/Jan/01 01:05:05.000001");
+	}
+
+	private void checkCustomDateTimeFormatter(LocalDateTime dateTime, String pattern, String expected) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+		assertEquals(dateTime.format(formatter), expected);
+	}
 }
