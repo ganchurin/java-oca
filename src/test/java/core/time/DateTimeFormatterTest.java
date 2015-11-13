@@ -69,7 +69,7 @@ public class DateTimeFormatterTest {
 	}
 
 	private void checkDateCustomFormatter(LocalDate date, String pattern, String expected) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+		DateTimeFormatter formatter = customLocalFormatter(pattern);
 		assertEquals(date.format(formatter), expected);
 	}
 
@@ -85,7 +85,7 @@ public class DateTimeFormatterTest {
 	}
 
 	private void checkCustomTimeFormatter(LocalTime time, String pattern, String expected) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+		DateTimeFormatter formatter = customLocalFormatter(pattern);
 		assertEquals(time.format(formatter), expected);
 	}
 
@@ -105,7 +105,11 @@ public class DateTimeFormatterTest {
 	}
 
 	private void checkCustomDateTimeFormatter(LocalDateTime dateTime, String pattern, String expected) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+		DateTimeFormatter formatter = customLocalFormatter(pattern);
 		assertEquals(dateTime.format(formatter), expected);
+	}
+
+	private DateTimeFormatter customLocalFormatter(String pattern) {
+		return DateTimeFormatter.ofPattern(pattern, Locale.US);
 	}
 }
