@@ -7,7 +7,7 @@ import static java.util.Arrays.sort;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 
-public class ArrayOpsTest {
+public class ArraysTest {
 
 	@Test
 	public void sortIntArray() {
