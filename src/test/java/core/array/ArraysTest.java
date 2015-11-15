@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class ArraysTest {
 
@@ -26,18 +26,18 @@ public class ArraysTest {
 	}
 
 	@Test
-	public void searchIntInSortedArray() {
+	public void searchStringInSortedArray() {
 		// You should sort array before binary searching
-		int[] arr = {1, 10, 100, 1000};
-		assertTrue(Arrays.binarySearch(arr, 1) == 0);
-		assertTrue(Arrays.binarySearch(arr, 10) == 1);
-		assertTrue(Arrays.binarySearch(arr, 100) == 2);
-		assertTrue(Arrays.binarySearch(arr, 1000) == 3);
+		String[] capitals = {"Berlin", "London", "Moscow", "Paris"};
+		assertEquals(Arrays.binarySearch(capitals, "Berlin"), 0);
+		assertEquals(Arrays.binarySearch(capitals, "London"), 1);
+		assertEquals(Arrays.binarySearch(capitals, "Moscow"), 2);
+		assertEquals(Arrays.binarySearch(capitals, "Paris"), 3);
 
-		assertTrue(Arrays.binarySearch(arr, 0) == -1);
-		assertTrue(Arrays.binarySearch(arr, 2) == -2);
-		assertTrue(Arrays.binarySearch(arr, 20) == -3);
-		assertTrue(Arrays.binarySearch(arr, 200) == -4);
-		assertTrue(Arrays.binarySearch(arr, 2000) == -5);
+		assertEquals(Arrays.binarySearch(capitals, "Athens"), -1);
+		assertEquals(Arrays.binarySearch(capitals, "Helsinki"), -2);
+		assertEquals(Arrays.binarySearch(capitals, "Madrid"), -3);
+		assertEquals(Arrays.binarySearch(capitals, "Oslo"), -4);
+		assertEquals(Arrays.binarySearch(capitals, "Stockholm"), -5);
 	}
 }
