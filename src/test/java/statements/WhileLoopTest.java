@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class While {
+public class WhileLoopTest {
 
 	@Test
 	public void testWhile() {

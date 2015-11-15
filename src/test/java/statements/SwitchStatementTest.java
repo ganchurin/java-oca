@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class Switch {
+public class SwitchStatementTest {
 
 	@Test
 	public void testSwitch() {
