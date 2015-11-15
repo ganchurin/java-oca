@@ -14,13 +14,16 @@ public class CollectionsTest {
 	public void sortCollection() {
 		List<String> capitals = Arrays.asList("Paris", "Moscow", "Berlin", "London");
 		List<String> expected = Arrays.asList("Berlin", "London", "Moscow", "Paris");
+
 		Collections.sort(capitals);
+
 		assertEquals(capitals, expected);
 	}
 
 	@Test
 	public void searchStringInSortedCollection() {
 		List<String> capitals = Arrays.asList("Berlin", "London", "Moscow", "Paris");
+
 		assertEquals(Collections.binarySearch(capitals, "Berlin"), 0);
 		assertEquals(Collections.binarySearch(capitals, "London"), 1);
 		assertEquals(Collections.binarySearch(capitals, "Moscow"), 2);
