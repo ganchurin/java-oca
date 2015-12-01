@@ -18,11 +18,11 @@ public class ArrayListTest {
 		assertTrue(list.isEmpty());
 		assertTrue(list.size() == 0);
 
-		list.add(new Object());
+		list.add("String");
 		assertFalse(list.isEmpty());
 		assertTrue(list.size() == 1);
 
-		list.add("String");
+		list.add(new Object());
 		assertFalse(list.isEmpty());
 		assertTrue(list.size() == 2);
 	}
