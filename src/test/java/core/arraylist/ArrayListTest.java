@@ -14,7 +14,7 @@ public class ArrayListTest {
 	@Test
 	public void createArrayList() {
 		// You can add object of any type
-		List list = new ArrayList();
+		ArrayList list = new ArrayList();
 		assertTrue(list.isEmpty());
 		assertTrue(list.size() == 0);
 
@@ -30,7 +30,7 @@ public class ArrayListTest {
 	@Test
 	public void createTypedArrayList() {
 		// Add objects of declared type only
-		List<String> list = new ArrayList<>();
+		ArrayList<String> list = new ArrayList<>();
 		assertTrue(list.isEmpty());
 		assertTrue(list.size() == 0);
 
