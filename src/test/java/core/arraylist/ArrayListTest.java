@@ -14,7 +14,7 @@ public class ArrayListTest {
 	@Test
 	public void createArrayList() {
 		// You can add object of any type
-		ArrayList list = new ArrayList();
+		List list = new ArrayList();
 		assertTrue(list.isEmpty());
 		assertTrue(list.size() == 0);
 
@@ -30,7 +30,7 @@ public class ArrayListTest {
 	@Test
 	public void createTypedArrayList() {
 		// Add objects of declared type only
-		ArrayList<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<>();
 		assertTrue(list.isEmpty());
 		assertTrue(list.size() == 0);
 
@@ -61,14 +61,14 @@ public class ArrayListTest {
 		// Size is a number of used slots
 
 		// Capacity is 10 by default
-		List<String> emptyList1 = new ArrayList<>();
+		List<String> list1 = new ArrayList<>();
 
 		// You can set capacity using constructor of ArrayList
-		List<String> emptyList2 = new ArrayList<>(20);
+		List<String> list2 = new ArrayList<>(20);
 
-		assertTrue(emptyList1.isEmpty());
-		assertTrue(emptyList2.isEmpty());
-		assertTrue(emptyList1.equals(emptyList2));
+		assertTrue(list1.isEmpty());
+		assertTrue(list2.isEmpty());
+		assertTrue(list1.equals(list2));
 	}
 
 	@Test
