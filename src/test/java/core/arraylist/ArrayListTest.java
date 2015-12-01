@@ -74,27 +74,27 @@ public class ArrayListTest {
 	@Test
 	public void createListFromList() {
 		// Create a list of stock symbols
-		List<String> original = new ArrayList<>();
-		original.add("AAPL");
-		original.add("MSFT");
+		List<String> list = new ArrayList<>();
+		list.add("AAPL");
+		list.add("MSFT");
 
 		// Create a copy using constructor of ArrayList
-		List<String> copy = new ArrayList<>(original);
+		List<String> copy = new ArrayList<>(list);
 
-		assertTrue(original.equals(copy));
+		assertTrue(list.equals(copy));
 	}
 
 	@Test
 	public void createListWithArraysUtil() {
 		// Create a list of stock symbols
-		List<String> original = new ArrayList<>();
-		original.add("AAPL");
-		original.add("MSFT");
+		List<String> list = new ArrayList<>();
+		list.add("AAPL");
+		list.add("MSFT");
 
 		// Create a copy using util method Arrays.asList
 		// Import java.util.Arrays to use Arrays.asList
 		List<String> copy = Arrays.asList("AAPL", "MSFT");
 
-		assertTrue(original.equals(copy));
+		assertTrue(list.equals(copy));
 	}
 }
