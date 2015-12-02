@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static org.junit.Assert.*;
 
 public class ArrayListOpsTest {
@@ -15,7 +16,7 @@ public class ArrayListOpsTest {
 		List<String> stocks = new ArrayList<>();
 
 		assertTrue(stocks.add("AAPL"));
-		assertEquals(stocks, asList("AAPL"));
+		assertEquals(stocks, singletonList("AAPL"));
 
 		stocks.add(0, "GOOG");
 		assertEquals(stocks, asList("GOOG", "AAPL"));
@@ -32,12 +33,12 @@ public class ArrayListOpsTest {
 		List<String> stocks = new ArrayList<>();
 
 		stocks.add("AAPL");
-		assertEquals(stocks, asList("AAPL"));
+		assertEquals(stocks, singletonList("AAPL"));
 
 		// Provide index and element to set
 		// Returns element previously at specified position
 		assertEquals(stocks.set(0, "YNDX"), "AAPL");
-		assertEquals(stocks, asList("YNDX"));
+		assertEquals(stocks, singletonList("YNDX"));
 
 		// throws IndexOutOfBoundsException
 		// stocks.set(1, "IBM");
@@ -60,7 +61,7 @@ public class ArrayListOpsTest {
 		// Provide an integer to remove element by index
 		// Returns element previously at specified position
 		assertEquals(stocks.remove(0), "YNDX");
-		assertEquals(stocks, asList("AAPL"));
+		assertEquals(stocks, singletonList("AAPL"));
 
 		// throws IndexOutOfBoundsException
 		// stocks.remove(1);
