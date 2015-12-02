@@ -68,6 +68,17 @@ public class ArrayListOpsTest {
 	}
 
 	@Test
+	public void removeIfElement() {
+		List<String> stocks = new ArrayList<>();
+		stocks.add("AAPL");
+		stocks.add("YNDX");
+		assertEquals(stocks, asList("AAPL", "YNDX"));
+
+		stocks.removeIf(x -> x.startsWith("A"));
+		assertEquals(stocks, singletonList("YNDX"));
+	}
+
+	@Test
 	public void clearElements() {
 		List<String> stocks = new ArrayList<>();
 		stocks.add("AAPL");
