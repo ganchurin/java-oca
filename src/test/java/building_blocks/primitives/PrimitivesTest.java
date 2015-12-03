@@ -29,21 +29,6 @@ public class PrimitivesTest {
 	}
 
 	@Test
-	public void createShortPrimitive() {
-		short s1 = 100;    // You can assign integer literal
-		short s2 = BYTE;    // OK
-		short s3 = SHORT;    // OK
-
-		// Assignments below do not compile
-		// short s4 = INT;    // Possible loss of precision
-		// short s5 = LONG;    // Possible loss of precision
-		// short s6 = FLOAT;    // You can't assign decimal value to integer primitive
-		// short s7 = DOUBLE;    // You can't assign decimal value to integer primitive
-		// short s8 = BOOLEAN;    // You can't assign boolean value to integer primitive
-		// short s9 = CHAR;    // Possible loss of precision
-	}
-
-	@Test
 	public void createIntPrimitive() {
 		int i1 = 100;    // You can assign integer literal
 		int i2 = BYTE;    // OK
