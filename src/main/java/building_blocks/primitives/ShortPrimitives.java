@@ -1,7 +1,5 @@
 package building_blocks.primitives;
 
-import building_blocks.primitives.PrimitiveConstants;
-
 public class ShortPrimitives implements PrimitiveConstants {
 
 	short s1 = 100;    // You can assign integer literal
