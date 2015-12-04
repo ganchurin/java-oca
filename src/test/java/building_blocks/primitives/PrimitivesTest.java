@@ -14,21 +14,6 @@ public class PrimitivesTest {
 	private static char CHAR = 'c';
 
 	@Test
-	public void createLongPrimitive() {
-		long l1 = 100;    // You can assign integer literal
-		long l2 = BYTE;    // OK
-		long l3 = SHORT;    // OK
-		long l4 = INT;    // OK
-		long l5 = LONG;    // OK
-		long l9 = CHAR;    // OK
-
-		// Assignments below do not compile
-		// long l6 = FLOAT;    // You can't assign decimal value to integer primitive
-		// long l7 = DOUBLE;    // You can't assign decimal value to integer primitive
-		// long l8 = BOOLEAN;    // You can't assign boolean value to integer primitive
-	}
-
-	@Test
 	public void createFloatPrimitive() {
 		float f1 = 100;    // You can assign integer literal
 		float f2 = BYTE;    // OK
