@@ -10,9 +10,9 @@ public interface PrimitiveConstants {
 
 	long LONG = (long) Integer.MAX_VALUE + 1;
 
-	float FLOAT = 5;
+	float FLOAT = Float.MAX_VALUE;
 
-	double DOUBLE = 6;
+	double DOUBLE = Float.MAX_VALUE + 1;
 
 	boolean BOOLEAN = true;
 
