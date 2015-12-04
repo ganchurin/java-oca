@@ -14,21 +14,6 @@ public class PrimitivesTest {
 	private static char CHAR = 'c';
 
 	@Test
-	public void createDoublePrimitive() {
-		double d1 = 100;    // You can assign integer literal
-		double d2 = BYTE;    // OK
-		double d3 = SHORT;    // OK
-		double d4 = INT;    // OK
-		double d5 = LONG;    // OK
-		double d6 = FLOAT;    // OK
-		double d7 = DOUBLE;    // OK
-		double d9 = CHAR;    // OK
-
-		// Assignments below do not compile
-		// double d8 = BOOLEAN;    // You can't assign boolean value to integer primitive
-	}
-
-	@Test
 	public void createBooleanPrimitive() {
 		// Assignments below do not compile
 		// boolean b1 = 100;    // You can't assign integer value to boolean
