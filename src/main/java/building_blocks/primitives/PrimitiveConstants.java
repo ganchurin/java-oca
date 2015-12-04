@@ -8,7 +8,7 @@ public interface PrimitiveConstants {
 
 	int INT = Short.MAX_VALUE + 1;
 
-	long LONG = 4;
+	long LONG = (long) Integer.MAX_VALUE + 1;
 
 	float FLOAT = 5;
 
