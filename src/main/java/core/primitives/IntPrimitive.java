@@ -1,4 +1,4 @@
-package building_blocks.primitives;
+package core.primitives;
 
 public class IntPrimitive implements PrimitiveConstants {
 
