@@ -1,4 +1,4 @@
-package building_blocks.base;
+package core.primitives;
 
 import org.junit.Test;
 
