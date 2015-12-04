@@ -1,6 +1,6 @@
 package building_blocks.primitives;
 
-public class IntPrimitives implements PrimitiveConstants {
+public class IntPrimitive implements PrimitiveConstants {
 
 	int i1 = 100;    // You can assign integer literal
 

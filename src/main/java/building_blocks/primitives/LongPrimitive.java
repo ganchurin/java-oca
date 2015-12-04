@@ -1,6 +1,6 @@
 package building_blocks.primitives;
 
-public class LongPrimitives implements PrimitiveConstants {
+public class LongPrimitive implements PrimitiveConstants {
 
 	long l1 = 100;    // You can assign integer literal
 

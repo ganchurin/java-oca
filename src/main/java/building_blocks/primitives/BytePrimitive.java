@@ -1,6 +1,6 @@
 package building_blocks.primitives;
 
-public class BytePrimitives implements PrimitiveConstants {
+public class BytePrimitive implements PrimitiveConstants {
 
 	byte b1 = 100;    // You can assign integer literal
 
