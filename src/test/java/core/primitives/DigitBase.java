@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class IntBase {
+public class DigitBase {
 
 	@Test
 	public void testOctalBase() {
