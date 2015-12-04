@@ -2,17 +2,15 @@ package building_blocks.primitives;
 
 public class IntPrimitive implements PrimitiveConstants {
 
-	int i1 = 100;    // You can assign integer literal
+	int i1 = 100;
 
-	int i2 = BYTE;    // OK
+	int i2 = BYTE;
 
-	int i3 = SHORT;    // OK
+	int i3 = SHORT;
 
-	int i4 = INT;    // OK
+	int i4 = INT;
 
-	int i9 = CHAR;    // OK
-
-	// Assignments below do not compile
+	int i9 = CHAR;
 
 	// COMPILE ERROR: incompatible types: possible lossy conversion from long to int
 	// int i5 = LONG;

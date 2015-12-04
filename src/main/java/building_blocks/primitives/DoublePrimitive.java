@@ -2,7 +2,7 @@ package building_blocks.primitives;
 
 public class DoublePrimitive implements PrimitiveConstants {
 
-	double d1 = 100;    // You can assign integer literal
+	double d1 = 100;
 
 	double d2 = BYTE;    // OK
 

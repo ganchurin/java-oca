@@ -2,19 +2,17 @@ package building_blocks.primitives;
 
 public class LongPrimitive implements PrimitiveConstants {
 
-	long l1 = 100;    // You can assign integer literal
+	long l1 = 100;
 
-	long l2 = BYTE;    // OK
+	long l2 = BYTE;
 
-	long l3 = SHORT;    // OK
+	long l3 = SHORT;
 
-	long l4 = INT;    // OK
+	long l4 = INT;
 
-	long l5 = LONG;    // OK
+	long l5 = LONG;
 
-	long l9 = CHAR;    // OK
-
-	// Assignments below do not compile
+	long l9 = CHAR;
 
 	// COMPILE ERROR: incompatible types: possible lossy conversion from float to long
 	// long l6 = FLOAT;

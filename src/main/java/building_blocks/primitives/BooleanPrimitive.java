@@ -2,8 +2,6 @@ package building_blocks.primitives;
 
 public class BooleanPrimitive implements PrimitiveConstants {
 
-	// Assignments below do not compile...
-
 	// COMPILE ERROR: incompatible types: int cannot be converted to boolean
 	// boolean b1 = 100;
 
@@ -28,7 +26,5 @@ public class BooleanPrimitive implements PrimitiveConstants {
 	// COMPILE ERROR: incompatible types: char cannot be converted to boolean
 	// boolean b9 = CHAR;
 
-	// ...except this
-
-	boolean b8 = BOOLEAN;    // OK
+	boolean b8 = BOOLEAN;
 }

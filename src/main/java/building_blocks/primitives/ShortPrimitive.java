@@ -2,13 +2,11 @@ package building_blocks.primitives;
 
 public class ShortPrimitive implements PrimitiveConstants {
 
-	short s1 = 100;    // You can assign integer literal
+	short s1 = 100;
 
-	short s2 = BYTE;    // OK
+	short s2 = BYTE;
 
-	short s3 = SHORT;    // OK
-
-	// Assignments below do not compile
+	short s3 = SHORT;
 
 	// COMPILE ERROR: incompatible types: possible lossy conversion from int to short
 	// short s4 = INT;

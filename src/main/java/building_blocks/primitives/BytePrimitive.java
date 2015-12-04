@@ -2,11 +2,9 @@ package building_blocks.primitives;
 
 public class BytePrimitive implements PrimitiveConstants {
 
-	byte b1 = 100;    // You can assign integer literal
+	byte b1 = 100;
 
-	byte b2 = BYTE;    // OK
-
-	// Assignments below do not compile
+	byte b2 = BYTE;
 
 	// COMPILE ERROR: incompatible types: possible lossy conversion from short to byte
 	// byte b3 = SHORT;

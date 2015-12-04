@@ -2,21 +2,19 @@ package building_blocks.primitives;
 
 public class FloatPrimitive implements PrimitiveConstants {
 
-	float f1 = 100;    // You can assign integer literal
+	float f1 = 100;
 
-	float f2 = BYTE;    // OK
+	float f2 = BYTE;
 
-	float f3 = SHORT;    // OK
+	float f3 = SHORT;
 
-	float f4 = INT;    // OK
+	float f4 = INT;
 
-	float f5 = LONG;    // OK
+	float f5 = LONG;
 
-	float f6 = FLOAT;    // OK
+	float f6 = FLOAT;
 
-	float f9 = CHAR;    // OK
-
-	// Assignments below do not compile
+	float f9 = CHAR;
 
 	// COMPILE ERROR: incompatible types: possible lossy conversion from double to float
 	// float f7 = DOUBLE;
