@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class LambdaTest {
 
 	@Test
-	public void testLambda() {
+	public void testOneParameterLambda() {
 		Value v = new Value(1);
 		assertEquals(v.handle(x -> x + 1), 2);
 		assertEquals(v.handle((x) -> x + 1), 2);
