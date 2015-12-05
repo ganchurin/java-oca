@@ -3,6 +3,7 @@ package core.array;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -44,5 +45,19 @@ public class ArraysTest {
 		assertEquals(Arrays.binarySearch(capitals, "Madrid"), -3);
 		assertEquals(Arrays.binarySearch(capitals, "Oslo"), -4);
 		assertEquals(Arrays.binarySearch(capitals, "Stockholm"), -5);
+	}
+
+	@Test
+	public void asList() {
+		String[] capitals = {"Berlin", "London", "Moscow", "Paris"};
+		List<String> list = Arrays.asList(capitals);
+
+		for (int i = 0; i < capitals.length; i++) {
+			assertEquals(capitals[i], list.get(i));
+		}
+
+		list.set(0, "Warsaw");
+
+		assertEquals(capitals[0], "Warsaw");
 	}
 }
