@@ -47,5 +47,8 @@ public class WrapperTest {
 	public void testEquality() {
 		assertTrue(new Integer(1) == 1);
 		assertFalse(new Integer(1).equals(new Short((short) 1)));
+
+		assertTrue(Integer.valueOf(1) == Integer.valueOf(1));
+		assertFalse(new Integer(1) == new Integer(1));
 	}
 }
