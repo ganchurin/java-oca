@@ -21,5 +21,14 @@ public class WrapperTest {
 		assertTrue(new Long(400) == 400L);
 		assertTrue(new Float(500) == 500);
 		assertTrue(new Double(600) == 600);
+
+		// Can't compile
+//		new Boolean();
+//		new Byte();
+//		new Short();
+//		new Integer();
+//		new Long();
+//		new Float();
+//		new Double();
 	}
 }
