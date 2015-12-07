@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 public class SwitchStatementTest {
 
 	@Test
-	public void testSwitch() {
+	public void testSwitch_1() {
 		int condition = 4;
 		int sum = 0;
 		final int x = 1, y = 2, z = 3;
@@ -23,5 +23,25 @@ public class SwitchStatementTest {
 				sum++;
 		}
 		assertTrue(sum == 2);
+	}
+
+	@Test
+	public void testSwitch_2() {
+		int num = 100;
+		int res = 0;
+		switch (num) {
+			case 50:
+				int a = 10;
+				res += a;
+				break;
+			case 100:
+				a = 20;
+				res += a;
+				break;
+			case 200:
+				a = 30;
+				res += a;
+		}
+		assertTrue(res == 20);
 	}
 }
