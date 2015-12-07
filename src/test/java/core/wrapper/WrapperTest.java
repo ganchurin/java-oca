@@ -42,4 +42,9 @@ public class WrapperTest {
 		assertTrue(new Float("500") == 500);
 		assertTrue(new Double("600") == 600);
 	}
+
+	@Test
+	public void testEquality() {
+		assertFalse(new Integer(1).equals(new Short((short) 1)));
+	}
 }
