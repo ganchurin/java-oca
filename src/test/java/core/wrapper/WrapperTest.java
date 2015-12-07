@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 public class WrapperTest {
 
 	@Test
-	public void createWrapper() {
+	public void initWithValue() {
 		assertTrue(Boolean.TRUE);
 		assertFalse(Boolean.FALSE);
 
@@ -21,15 +21,6 @@ public class WrapperTest {
 		assertTrue(new Float(500) == 500);
 		assertTrue(new Double(600) == 600);
 
-		assertTrue(new Boolean("true"));
-		assertFalse(new Boolean("false"));
-		assertTrue(new Byte("100") == (byte) 100);
-		assertTrue(new Short("200") == (short) 200);
-		assertTrue(new Integer("300") == 300);
-		assertTrue(new Long("400") == 400L);
-		assertTrue(new Float("500") == 500);
-		assertTrue(new Double("600") == 600);
-
 		// Can't compile
 		// new Boolean();
 		// new Byte();
@@ -38,5 +29,17 @@ public class WrapperTest {
 		// new Long();
 		// new Float();
 		// new Double();
+	}
+
+	@Test
+	public void initWithString() {
+		assertTrue(new Boolean("true"));
+		assertFalse(new Boolean("false"));
+		assertTrue(new Byte("100") == (byte) 100);
+		assertTrue(new Short("200") == (short) 200);
+		assertTrue(new Integer("300") == 300);
+		assertTrue(new Long("400") == 400L);
+		assertTrue(new Float("500") == 500);
+		assertTrue(new Double("600") == 600);
 	}
 }
