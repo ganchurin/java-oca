@@ -50,5 +50,6 @@ public class WrapperTest {
 
 		assertTrue(Integer.valueOf(1) == Integer.valueOf(1));
 		assertFalse(new Integer(1) == new Integer(1));
+		assertFalse(new Integer(1).equals(new Long(1)));
 	}
 }
