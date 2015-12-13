@@ -2,24 +2,26 @@ package core.wrapper;
 
 import org.junit.Test;
 
+import static java.lang.Short.MAX_VALUE;
+import static java.lang.Short.MIN_VALUE;
 import static org.junit.Assert.assertEquals;
 
 public class ParseShortTest {
 
 	@Test
 	public void parseShort() {
-		assertEquals(Short.parseShort(Short.MIN_VALUE + ""), Short.MIN_VALUE);
-		assertEquals(Short.parseShort(Short.MAX_VALUE + ""), Short.MAX_VALUE);
+		assertEquals(Short.parseShort(MIN_VALUE + ""), MIN_VALUE);
+		assertEquals(Short.parseShort(MAX_VALUE + ""), MAX_VALUE);
 	}
 
 	@Test(expected = NumberFormatException.class)
 	public void parseShortUnderFlow() {
-		Short.parseShort(Short.MIN_VALUE - 1 + "");
+		Short.parseShort(MIN_VALUE - 1 + "");
 	}
 
 	@Test(expected = NumberFormatException.class)
 	public void parseShortOverflow() {
-		Short.parseShort(Short.MAX_VALUE + 1 + "");
+		Short.parseShort(MAX_VALUE + 1 + "");
 	}
 
 	@Test(expected = NumberFormatException.class)

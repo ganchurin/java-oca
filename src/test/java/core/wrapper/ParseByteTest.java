@@ -2,24 +2,26 @@ package core.wrapper;
 
 import org.junit.Test;
 
+import static java.lang.Byte.MAX_VALUE;
+import static java.lang.Byte.MIN_VALUE;
 import static org.junit.Assert.assertEquals;
 
 public class ParseByteTest {
 
 	@Test
 	public void parseByte() {
-		assertEquals(Byte.parseByte(Byte.MIN_VALUE + ""), Byte.MIN_VALUE);
-		assertEquals(Byte.parseByte(Byte.MAX_VALUE + ""), Byte.MAX_VALUE);
+		assertEquals(Byte.parseByte(MIN_VALUE + ""), MIN_VALUE);
+		assertEquals(Byte.parseByte(MAX_VALUE + ""), MAX_VALUE);
 	}
 
 	@Test(expected = NumberFormatException.class)
 	public void parseByteUnderFlow() {
-		Byte.parseByte(Byte.MIN_VALUE - 1 + "");
+		Byte.parseByte(MIN_VALUE - 1 + "");
 	}
 
 	@Test(expected = NumberFormatException.class)
 	public void parseByteOverflow() {
-		Byte.parseByte(Byte.MAX_VALUE + 1 + "");
+		Byte.parseByte(MAX_VALUE + 1 + "");
 	}
 
 	@Test(expected = NumberFormatException.class)
