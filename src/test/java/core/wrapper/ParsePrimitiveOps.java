@@ -7,14 +7,6 @@ import static org.junit.Assert.assertEquals;
 public class ParsePrimitiveOps {
 
 	@Test
-	public void parseInt() {
-		assertEquals(Integer.parseInt("300"), 300);
-
-		// throws NumberFormatException
-		// assertEquals(Integer.parseInt("abc"), 300);
-	}
-
-	@Test
 	public void parseLong() {
 		assertEquals(Long.parseLong("400"), 400);
 

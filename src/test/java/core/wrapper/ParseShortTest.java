@@ -13,17 +13,17 @@ public class ParseShortTest {
 	}
 
 	@Test(expected = NumberFormatException.class)
-	public void parseByteUnderFlow() {
+	public void parseShortUnderFlow() {
 		Short.parseShort(Short.MIN_VALUE - 1 + "");
 	}
 
 	@Test(expected = NumberFormatException.class)
-	public void parseByteOverflow() {
+	public void parseShortOverflow() {
 		Short.parseShort(Short.MAX_VALUE + 1 + "");
 	}
 
 	@Test(expected = NumberFormatException.class)
-	public void parseWrongByteString() {
+	public void parseWrongIntegerString() {
 		Short.parseShort("0.0");
 	}
 }
