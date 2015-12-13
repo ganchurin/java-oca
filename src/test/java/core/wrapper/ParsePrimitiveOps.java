@@ -7,14 +7,6 @@ import static org.junit.Assert.assertEquals;
 public class ParsePrimitiveOps {
 
 	@Test
-	public void parseByte() {
-		assertEquals(Byte.parseByte("100"), 100);
-
-		// throws NumberFormatException
-		// assertTrue(Byte.parseByte("128") == -128);
-	}
-
-	@Test
 	public void parseShort() {
 		assertEquals(Short.parseShort("200"), 200);
 
