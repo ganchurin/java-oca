@@ -44,4 +44,18 @@ public class SwitchStatementTest {
 		}
 		assertTrue(res == 20);
 	}
+
+	@Test
+	public void testSwitch_3() {
+		byte b = 1;
+		switch (b) {
+			case 'a':
+				b += 1;
+				break;
+			case 1:
+				b += 2;
+				break;
+		}
+		assertTrue(b == 3);
+	}
 }
