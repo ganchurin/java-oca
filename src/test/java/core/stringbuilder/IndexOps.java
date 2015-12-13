@@ -15,6 +15,16 @@ public class IndexOps {
 		assertTrue(sb.charAt(2) == '3');
 	}
 
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void checkCharOutOfBounds_01() {
+		new StringBuilder("1").charAt(1);
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void checkCharOutOfBounds_02() {
+		new StringBuilder("1").charAt(-1);
+	}
+
 	@Test
 	public void checkIndexOfString() {
 		StringBuilder sb = new StringBuilder("123");
