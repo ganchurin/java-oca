@@ -1,4 +1,4 @@
-package core.time;
+package core.time.period;
 
 import org.junit.Test;
 

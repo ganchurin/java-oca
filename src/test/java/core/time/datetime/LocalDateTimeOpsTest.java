@@ -1,4 +1,4 @@
-package core.time;
+package core.time.datetime;
 
 import org.junit.Test;
 
