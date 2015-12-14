@@ -2,26 +2,24 @@ package core.wrapper.parse;
 
 import org.junit.Test;
 
-import static java.lang.Long.MAX_VALUE;
-import static java.lang.Long.MIN_VALUE;
 import static org.junit.Assert.assertEquals;
 
 public class ParseLongTest {
 
 	@Test
 	public void parseLong() {
-		assertEquals(Long.parseLong(MIN_VALUE + ""), MIN_VALUE);
-		assertEquals(Long.parseLong(MAX_VALUE + ""), MAX_VALUE);
+		assertEquals(Long.parseLong(Long.MIN_VALUE + ""), Long.MIN_VALUE);
+		assertEquals(Long.parseLong(Long.MAX_VALUE + ""), Long.MAX_VALUE);
 	}
 
 	@Test(expected = NumberFormatException.class)
 	public void parseLongUnderFlow() {
-		Long.parseLong(MIN_VALUE + "0");
+		Long.parseLong(Long.MIN_VALUE + "0");
 	}
 
 	@Test(expected = NumberFormatException.class)
 	public void parseLongOverflow() {
-		Long.parseLong(MAX_VALUE + "0");
+		Long.parseLong(Long.MAX_VALUE + "0");
 	}
 
 	@Test(expected = NumberFormatException.class)
