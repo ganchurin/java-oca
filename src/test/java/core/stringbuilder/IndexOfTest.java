@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 public class IndexOfTest {
 
 	@Test
-	public void checkIndexOfString() {
+	public void indexOfString() {
 		StringBuilder builder = new StringBuilder("123");
 
 		assertTrue(builder.indexOf("1") == 0);
@@ -17,7 +17,7 @@ public class IndexOfTest {
 	}
 
 	@Test
-	public void checkIndexOfStringFromIndex() {
+	public void indexOfStringFromIndex() {
 		StringBuilder builder = new StringBuilder("123");
 
 		assertTrue(builder.indexOf("1", 1) == -1);

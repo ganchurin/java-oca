@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class InsertTest {
 
 	@Test
-	public void checkInsert() {
+	public void insertStringAtIndex() {
 		StringBuilder builder = new StringBuilder("StringBuilder");
 		builder.insert(13, "Mutable");
 		builder.insert(13, "Is");
