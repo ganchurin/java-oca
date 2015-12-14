@@ -10,13 +10,13 @@ import static org.junit.Assert.assertEquals;
 public class LocalDateTest {
 
 	@Test
-	public void createCurrentDate() {
+	public void currentDate() {
 		// Use static method 'now' to create new date object with current date
 		LocalDate.now();
 	}
 
 	@Test
-	public void createCustomDate() {
+	public void customDate() {
 		// Use static method 'of' to create new custom date object
 		// Set year, month index and day of month
 		LocalDate date1 = LocalDate.of(2015, 10, 30);
@@ -42,5 +42,11 @@ public class LocalDateTest {
 		// then do not forget to assign new value to a reference
 		date.plusYears(10).minusMonths(10);
 		assertEquals(date, LocalDate.of(2015, 10, 30));
+	}
+
+	@Test
+	public void checkToString() {
+		LocalDate date = LocalDate.of(2015, 10, 30);
+		assertEquals(date.toString(), "2015-10-30");
 	}
 }
