@@ -1,10 +1,10 @@
-package statements;
+package flows.ternary_block;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class TernaryStatementTest {
+public class TernaryBlockTest {
 
 	@Test
 	public void testTernaryLeftExpression() {

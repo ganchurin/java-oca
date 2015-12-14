@@ -1,4 +1,4 @@
-package statements;
+package flows.while_loop;
 
 import org.junit.Test;
 

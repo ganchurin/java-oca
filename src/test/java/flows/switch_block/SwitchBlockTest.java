@@ -1,10 +1,10 @@
-package statements;
+package flows.switch_block;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class SwitchStatementTest {
+public class SwitchBlockTest {
 
 	@Test
 	public void testSwitch_1() {
