@@ -8,11 +8,17 @@ public class ReplaceTest {
 
 	@Test
 	public void replaceChars() {
-		assertEquals("Firefly".replace('f', 's'), "Firesly");
+		String str = "Firefly".replace('f', 's');
+		String exp = "Firesly";
+
+		assertEquals(str, exp);
 	}
 
 	@Test
 	public void replaceString() {
-		assertEquals("Firefly".replace("fly", "ball"), "Fireball");
+		String str = "Firefly".replace("fly", "ball");
+		String exp = "Fireball";
+
+		assertEquals(str, exp);
 	}
 }

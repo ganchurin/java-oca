@@ -8,6 +8,9 @@ public class MethodChainTest {
 
 	@Test
 	public void checkMethodChain() {
-		assertEquals(" Firefly ".trim().toLowerCase().replace('f', 'F'), "FireFly");
+		String str = " Firefly ".trim().toLowerCase().replace('f', 'F');
+		String exp = "FireFly";
+
+		assertEquals(str, exp);
 	}
 }

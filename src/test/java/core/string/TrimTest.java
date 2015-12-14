@@ -8,6 +8,9 @@ public class TrimTest {
 
 	@Test
 	public void checkTrim() {
-		assertEquals(" \t \n \r Mission Serenity \t \n \r ".trim(), "Mission Serenity");
+		String str = " \t \n \r Mission Serenity \t \n \r ";
+		String exp = "Mission Serenity";
+
+		assertEquals(str.trim(), exp);
 	}
 }
