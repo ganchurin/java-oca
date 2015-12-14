@@ -8,8 +8,10 @@ public class InsertTest {
 
 	@Test
 	public void checkInsert() {
-		StringBuilder sb = new StringBuilder("StringBuilder");
-		sb.insert(13, "Mutable").insert(13, "Is");
-		assertEquals(sb.toString(), "StringBuilderIsMutable");
+		StringBuilder builder = new StringBuilder("StringBuilder");
+		builder.insert(13, "Mutable");
+		builder.insert(13, "Is");
+
+		assertEquals(builder.toString(), "StringBuilderIsMutable");
 	}
 }
