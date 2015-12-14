@@ -22,13 +22,18 @@ public class CollectionsTest {
 	}
 
 	@Test
-	public void searchStringInSortedCollection() {
+	public void searchExistingStringInSortedCollection() {
 		List<String> capitals = Arrays.asList("Berlin", "London", "Moscow", "Paris");
 
 		assertEquals(Collections.binarySearch(capitals, "Berlin"), 0);
 		assertEquals(Collections.binarySearch(capitals, "London"), 1);
 		assertEquals(Collections.binarySearch(capitals, "Moscow"), 2);
 		assertEquals(Collections.binarySearch(capitals, "Paris"), 3);
+	}
+
+	@Test
+	public void searchAbsentStringInSortedCollection() {
+		List<String> capitals = Arrays.asList("Berlin", "London", "Moscow", "Paris");
 
 		assertEquals(Collections.binarySearch(capitals, "Athens"), -1);
 		assertEquals(Collections.binarySearch(capitals, "Helsinki"), -2);
