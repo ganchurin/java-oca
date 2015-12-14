@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ConcatOps {
+public class ConcatTest {
 
 	@Test
-	public void concatenateWithPlusOp() {
+	public void concatWithPlusOp() {
 		assertEquals("ab", "a" + "b");
 		assertEquals("ab1", "a" + "b" + 1);
 		assertEquals("ab11", "a" + "b" + 1 + 1);
@@ -16,7 +16,7 @@ public class ConcatOps {
 	}
 
 	@Test
-	public void concatenateWithCompoundOp() {
+	public void concatWithCompoundOp() {
 		String s = "abc";
 		assertEquals("abc", s);
 		s += "d";
@@ -26,7 +26,7 @@ public class ConcatOps {
 	}
 
 	@Test
-	public void concatenateWithConcatMethod() {
+	public void concatWithConcatMethod() {
 		String s = "abc";
 		assertEquals("abc", s);
 		s = s.concat("d");
