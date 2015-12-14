@@ -1,4 +1,4 @@
-package statements;
+package statements.for_loop;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -69,15 +69,5 @@ public class ForLoopTest {
 			y += y++;
 		}
 		assertTrue(y == 0);
-	}
-
-	@Test
-	public void checkForEachLoop() {
-		String[] capitals = {"Berlin", "London", "Moscow", "Paris"};
-		int step = 0;
-		for (String capital : capitals) {
-			Assert.assertEquals(capital, capitals[step]);
-			step++;
-		}
 	}
 }
