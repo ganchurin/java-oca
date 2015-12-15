@@ -13,8 +13,10 @@ public class ContainsTest {
 	@Test
 	public void containsElement() {
 		List<String> stocks = new ArrayList<>();
+
 		stocks.add("AAPL");
 		stocks.add("YNDX");
+
 		assertEquals(stocks, asList("AAPL", "YNDX"));
 
 		assertTrue(stocks.contains("AAPL"));

@@ -14,11 +14,14 @@ public class ClearTest {
 	@Test
 	public void clearElements() {
 		List<String> stocks = new ArrayList<>();
+
 		stocks.add("AAPL");
 		stocks.add("YNDX");
+
 		assertEquals(stocks, asList("AAPL", "YNDX"));
 
 		stocks.clear();
+
 		assertTrue(stocks.isEmpty());
 		assertTrue(stocks.size() == 0);
 	}
