@@ -1,31 +1,44 @@
 package core.arraylist;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class AddTest {
 
+	private List<String> list;
+
+	@Before
+	public void initList() {
+		list = new ArrayList<>();
+	}
+
 	@Test
-	public void addElement() {
-		List<String> stocks = new ArrayList<>();
+	public void addTest() {
+		assertTrue(list.add("AAPL"));
+		assertEquals(list, Collections.singletonList("AAPL"));
+	}
 
-		assertTrue(stocks.add("AAPL"));
-		assertEquals(stocks, singletonList("AAPL"));
+	@Test
+	public void addAtIndexTest() {
+		list.add("AAPL");
 
-		stocks.add(0, "GOOG");
-		assertEquals(stocks, asList("GOOG", "AAPL"));
+		list.add(0, "GOOG");
+		assertEquals(list, Arrays.asList("GOOG", "AAPL"));
 
-		stocks.add(2, "IBM");
-		assertEquals(stocks, asList("GOOG", "AAPL", "IBM"));
+		list.add(2, "IBM");
+		assertEquals(list, Arrays.asList("GOOG", "AAPL", "IBM"));
+	}
 
-		// throws IndexOutOfBoundsException
-		// stocks.add(4, "IBM");
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void addAtExceedingIndex() {
+		list.add(1, "AAPL");
 	}
 }
