@@ -5,10 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
 import static org.junit.Assert.assertEquals;
 
 public class RemoveTest {
@@ -33,7 +33,7 @@ public class RemoveTest {
 		// The first matched element will be removed
 		// Returns true if element was removed, otherwise - false
 		assertEquals(list.remove("AAPL"), true);
-		assertEquals(list, asList("YNDX", "AAPL"));
+		assertEquals(list, Arrays.asList("YNDX", "AAPL"));
 	}
 
 	@Test
@@ -41,7 +41,7 @@ public class RemoveTest {
 		// Provide an integer to remove element by index
 		// Returns element previously at specified position
 		assertEquals(list.remove(0), "AAPL");
-		assertEquals(list, asList("YNDX", "AAPL"));
+		assertEquals(list, Arrays.asList("YNDX", "AAPL"));
 	}
 
 	@Test(expected = IndexOutOfBoundsException.class)
@@ -57,6 +57,6 @@ public class RemoveTest {
 	@Test
 	public void removeIfTest() {
 		list.removeIf(x -> x.startsWith("A"));
-		assertEquals(list, singletonList("YNDX"));
+		assertEquals(list, Collections.singletonList("YNDX"));
 	}
 }
