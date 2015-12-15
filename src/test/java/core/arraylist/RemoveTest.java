@@ -1,5 +1,7 @@
 package core.arraylist;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -11,37 +13,45 @@ import static org.junit.Assert.assertEquals;
 
 public class RemoveTest {
 
-	@Test
-	public void removeElement() {
-		List<String> stocks = new ArrayList<>();
-		stocks.add("AAPL");
-		stocks.add("YNDX");
-		stocks.add("AAPL");
-		assertEquals(stocks, asList("AAPL", "YNDX", "AAPL"));
+	private List<String> list = new ArrayList<>();
 
-		// Provide an object to remove it from list
-		// The first matched element will be removed
-		// Returns true if element was removed, otherwise - false
-		assertEquals(stocks.remove("AAPL"), true);
-		assertEquals(stocks, asList("YNDX", "AAPL"));
+	@Before
+	public void init() {
+		list.add("AAPL");
+		list.add("YNDX");
+		list.add("AAPL");
+	}
 
-		// Provide an integer to remove element by index
-		// Returns element previously at specified position
-		assertEquals(stocks.remove(0), "YNDX");
-		assertEquals(stocks, singletonList("AAPL"));
-
-		// throws IndexOutOfBoundsException
-		// stocks.remove(1);
+	@After
+	public void clear() {
+		list.clear();
 	}
 
 	@Test
-	public void removeIfElement() {
-		List<String> stocks = new ArrayList<>();
-		stocks.add("AAPL");
-		stocks.add("YNDX");
-		assertEquals(stocks, asList("AAPL", "YNDX"));
+	public void removeTest() {
+		// Provide an object to remove it from list
+		// The first matched element will be removed
+		// Returns true if element was removed, otherwise - false
+		assertEquals(list.remove("AAPL"), true);
+		assertEquals(list, asList("YNDX", "AAPL"));
+	}
 
-		stocks.removeIf(x -> x.startsWith("A"));
-		assertEquals(stocks, singletonList("YNDX"));
+	@Test
+	public void removeAtIndexTest() {
+		// Provide an integer to remove element by index
+		// Returns element previously at specified position
+		assertEquals(list.remove(0), "AAPL");
+		assertEquals(list, asList("YNDX", "AAPL"));
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void removeAtExceedingIndex() {
+		list.remove(3);
+	}
+
+	@Test
+	public void removeIfTest() {
+		list.removeIf(x -> x.startsWith("A"));
+		assertEquals(list, singletonList("YNDX"));
 	}
 }
