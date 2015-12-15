@@ -1,6 +1,6 @@
 package core.arraylist;
 
-import org.junit.Before;
+import org.junit.After;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,11 +13,11 @@ import static org.junit.Assert.assertTrue;
 
 public class AddTest {
 
-	private List<String> list;
+	private List<String> list = new ArrayList<>();
 
-	@Before
-	public void initList() {
-		list = new ArrayList<>();
+	@After
+	public void clear() {
+		list.clear();
 	}
 
 	@Test

@@ -1,5 +1,6 @@
 package core.arraylist;
 
+import org.junit.After;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -10,19 +11,26 @@ import static org.junit.Assert.assertEquals;
 
 public class SetTest {
 
-	@Test
-	public void setElement() {
-		List<String> stocks = new ArrayList<>();
+	List<String> list = new ArrayList<>();
 
-		stocks.add("AAPL");
-		assertEquals(stocks, singletonList("AAPL"));
+	@After
+	public void clear() {
+		list.clear();
+	}
+
+	@Test
+	public void setTest() {
+		list.add("AAPL");
+		assertEquals(list, singletonList("AAPL"));
 
 		// Provide index and element to set
 		// Returns element previously at specified position
-		assertEquals(stocks.set(0, "YNDX"), "AAPL");
-		assertEquals(stocks, singletonList("YNDX"));
+		assertEquals(list.set(0, "YNDX"), "AAPL");
+		assertEquals(list, singletonList("YNDX"));
+	}
 
-		// throws IndexOutOfBoundsException
-		// stocks.set(1, "IBM");
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void setAtExceedingIndex() {
+		list.set(1, "IBM");
 	}
 }
