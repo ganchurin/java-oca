@@ -45,6 +45,11 @@ public class RemoveTest {
 	}
 
 	@Test(expected = IndexOutOfBoundsException.class)
+	public void removeAtNegativeIndex() {
+		list.remove(-1);
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
 	public void removeAtExceedingIndex() {
 		list.remove(3);
 	}

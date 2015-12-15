@@ -38,6 +38,11 @@ public class AddTest {
 	}
 
 	@Test(expected = IndexOutOfBoundsException.class)
+	public void addAtNegativeIndex() {
+		list.add(-1, "AAPL");
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
 	public void addAtExceedingIndex() {
 		list.add(1, "AAPL");
 	}

@@ -30,6 +30,11 @@ public class SetTest {
 	}
 
 	@Test(expected = IndexOutOfBoundsException.class)
+	public void setAtNegativeIndex() {
+		list.set(-1, "IBM");
+	}
+
+	@Test(expected = IndexOutOfBoundsException.class)
 	public void setAtExceedingIndex() {
 		list.set(1, "IBM");
 	}
