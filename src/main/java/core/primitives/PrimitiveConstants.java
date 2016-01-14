@@ -4,7 +4,7 @@ public interface PrimitiveConstants {
 
 	byte BYTE = 1;
 
-	short SHORT = Byte.MAX_VALUE + 1;
+	short SHORT = Byte.MAX_VALUE + (byte) 1;
 
 	int INT = Short.MAX_VALUE + 1;
 
