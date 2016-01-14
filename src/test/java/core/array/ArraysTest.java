@@ -5,10 +5,20 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class ArraysTest {
+
+	@Test
+	public void arraysEquals() {
+		int[] numbers1 = {20, 10, 5};
+		int[] numbers2 = {20, 10, 5};
+		int[] numbers3 = {20, 10, 0};
+
+		assertTrue(Arrays.equals(numbers1, numbers2));
+		assertFalse(Arrays.equals(numbers1, numbers3));
+		assertFalse(Arrays.equals(numbers2, numbers3));
+	}
 
 	@Test
 	public void sortIntArray() {
