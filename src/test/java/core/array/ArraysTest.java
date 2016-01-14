@@ -12,8 +12,8 @@ public class ArraysTest {
 
 	@Test
 	public void sortIntArray() {
-		int[] numbers = {3, 2, 1};
-		int[] expected = {1, 2, 3};
+		int[] numbers = {20, 10, 5};
+		int[] expected = {5, 10, 20};
 
 		Arrays.sort(numbers);
 
@@ -22,8 +22,8 @@ public class ArraysTest {
 
 	@Test
 	public void sortStringArray() {
-		String[] numbers = {"3", "10", "20"};
-		String[] expected = {"10", "20", "3"};
+		String[] numbers = {"20", "10", "5"};
+		String[] expected = {"10", "20", "5"};
 
 		Arrays.sort(numbers);
 
