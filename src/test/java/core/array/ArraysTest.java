@@ -60,8 +60,12 @@ public class ArraysTest {
 			assertEquals(capitals[i], list.get(i));
 		}
 
+		// Change in list changes array
 		list.set(0, "Warsaw");
-
 		assertEquals(capitals[0], "Warsaw");
+
+		// And vice versa
+		capitals[0] = "Milan";
+		assertEquals(list.get(0), "Milan");
 	}
 }
