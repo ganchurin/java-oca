@@ -52,20 +52,21 @@ public class ArraysTest {
 
 	@Test
 	public void asList() {
-		String[] capitals = {"Berlin", "London", "Moscow", "Paris"};
+		String[] capitals = {"Berlin", "London"};
 		// Creates list backed by array
 		List<String> list = Arrays.asList(capitals);
 
-		for (int i = 0; i < capitals.length; i++) {
-			assertEquals(capitals[i], list.get(i));
-		}
+
+		assertEquals("Berlin", list.get(0));
+		assertEquals("London", list.get(1));
+
 
 		// Change in list changes array
 		list.set(0, "Warsaw");
 		assertEquals(capitals[0], "Warsaw");
 
 		// And vice versa
-		capitals[0] = "Milan";
-		assertEquals(list.get(0), "Milan");
+		capitals[1] = "Milan";
+		assertEquals(list.get(1), "Milan");
 	}
 }
