@@ -35,11 +35,14 @@ public class ArraysTest {
 		// You should sort array before binary searching
 		String[] capitals = {"Berlin", "London", "Moscow", "Paris"};
 
+		// Returns index of searched string
 		assertEquals(Arrays.binarySearch(capitals, "Berlin"), 0);
 		assertEquals(Arrays.binarySearch(capitals, "London"), 1);
 		assertEquals(Arrays.binarySearch(capitals, "Moscow"), 2);
 		assertEquals(Arrays.binarySearch(capitals, "Paris"), 3);
 
+		// Computes potential index of searched string
+		// Then it inverts and decrements index
 		assertEquals(Arrays.binarySearch(capitals, "Athens"), -1);
 		assertEquals(Arrays.binarySearch(capitals, "Helsinki"), -2);
 		assertEquals(Arrays.binarySearch(capitals, "Madrid"), -3);
@@ -50,6 +53,7 @@ public class ArraysTest {
 	@Test
 	public void asList() {
 		String[] capitals = {"Berlin", "London", "Moscow", "Paris"};
+		// Creates list backed by array
 		List<String> list = Arrays.asList(capitals);
 
 		for (int i = 0; i < capitals.length; i++) {
