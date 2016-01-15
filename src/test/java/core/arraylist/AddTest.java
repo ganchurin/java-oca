@@ -21,13 +21,13 @@ public class AddTest {
 	}
 
 	@Test
-	public void addTest() {
+	public void add() {
 		assertTrue(list.add("AAPL"));
 		assertEquals(list, Collections.singletonList("AAPL"));
 	}
 
 	@Test
-	public void addAtIndexTest() {
+	public void addAtIndex() {
 		list.add("AAPL");
 
 		list.add(0, "GOOG");
