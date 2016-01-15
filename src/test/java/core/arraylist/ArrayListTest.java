@@ -4,39 +4,35 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ArrayListTest {
 
 	@Test
 	public void createArrayList() {
-		// You can add object of any type
+		// Create untyped ArrayList
 		ArrayList list = new ArrayList();
-		assertTrue(list.isEmpty());
-		assertTrue(list.size() == 0);
 
+		// You can add object of any type
 		list.add("String");
-		assertFalse(list.isEmpty());
-		assertTrue(list.size() == 1);
+		list.add(Boolean.TRUE);
 
-		list.add(new Object());
-		assertFalse(list.isEmpty());
-		assertTrue(list.size() == 2);
+		assertEquals(list, Arrays.asList("String", Boolean.TRUE));
 	}
 
 	@Test
 	public void createTypedArrayList() {
-		// Add objects of declared type only
+		// Create typed ArrayList
 		ArrayList<String> list = new ArrayList<>();
-		assertTrue(list.isEmpty());
-		assertTrue(list.size() == 0);
 
+		// You can add only String objects
 		list.add("String");
-		assertFalse(list.isEmpty());
-		assertTrue(list.size() == 1);
+
+		assertEquals(list, Collections.singletonList("String"));
 
 		// COMPILE ERROR!
 		// list.add(new Object());
@@ -44,14 +40,14 @@ public class ArrayListTest {
 
 	@Test
 	public void createTypedList() {
-		// You can use variable type List instead of ArrayList
+		// You can use polymorphic variable of type List
 		// List is an interface implemented by ArrayList
 		// Import java.util.List to use List
 		List<String> list = new ArrayList<>();
 
 		list.add("String");
-		assertFalse(list.isEmpty());
-		assertTrue(list.size() == 1);
+
+		assertEquals(list, Collections.singletonList("String"));
 	}
 
 	@Test
@@ -91,8 +87,6 @@ public class ArrayListTest {
 		list.add("AAPL");
 		list.add("MSFT");
 
-		// Create a copy using util method Arrays.asList
-		// Import java.util.Arrays to use Arrays.asList
 		List<String> copy = Arrays.asList("AAPL", "MSFT");
 
 		assertTrue(list.equals(copy));
