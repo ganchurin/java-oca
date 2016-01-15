@@ -13,14 +13,17 @@ public class EqualityTest {
 		String s2 = "Firefly";
 		assertTrue(s1 == s2);
 
-		String s3 = new String("Firefly");
-		assertFalse(s1 == s3);
-		assertFalse(s2 == s3);
+		String s3 = "Fire" + "fly";
+		assertTrue(s1 == s3);
 
-		String s4 = new String(s1);
+		String s4 = new String("Firefly");
 		assertFalse(s1 == s4);
 		assertFalse(s2 == s4);
-		assertFalse(s3 == s4);
+
+		String s5 = new String(s1);
+		assertFalse(s1 == s5);
+		assertFalse(s2 == s5);
+		assertFalse(s4 == s5);
 	}
 
 	@Test
