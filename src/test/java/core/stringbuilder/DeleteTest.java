@@ -17,8 +17,8 @@ public class DeleteTest {
 
 	@Test
 	public void deleteStringFromUntilIndex() {
-
 		StringBuilder builder = new StringBuilder("123");
+
 		assertEquals(builder.delete(2, 3).toString(), "12");
 		assertEquals(builder.delete(0, 2).toString(), "");
 	}
