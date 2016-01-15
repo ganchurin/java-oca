@@ -18,5 +18,4 @@ public class ByteBounds {
 		assertTrue((byte) (Byte.MIN_VALUE - 1) == Byte.MAX_VALUE);
 	}
 
-
 }
