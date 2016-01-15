@@ -2,8 +2,6 @@ package core.array;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 public class ArrayTest {
@@ -17,16 +15,8 @@ public class ArrayTest {
 		// Array class doesn't override 'Object.equals', therefore it checks reference equality
 		// In this example both variables refer to different objects and equality fails
 		assertFalse(array1.equals(array2));
-
-		// Use util method 'Arrays.equals' if you want to compare arrays by values
-		assertTrue(Arrays.equals(array1, array2));
-
-		// Let's create one more array variable and assign it 'array2'
-		int[] array3 = array2;
-
-		// Variables 'array2' and 'array3' refer to the same object
-		assertTrue(array2.equals(array3));
-		assertTrue(Arrays.equals(array2, array3));
+		assertTrue(array2.equals(array2));
+		// TIP: Use util method 'Arrays.equals' if you want to compare arrays by values
 	}
 
 	@Test
