@@ -26,6 +26,7 @@ public class FormatDateTest implements DateTimeFormatUtils {
 		checkDateCustomFormat(date, "yy/M/d", "16/1/1");
 		checkDateCustomFormat(date, "yy/M/dd", "16/1/01");
 		checkDateCustomFormat(date, "yy/MM/dd", "16/01/01");
+		checkDateCustomFormat(date, "yy/MMM/dd", "16/Jan/01");
 		checkDateCustomFormat(date, "yyyy/MMM/dd", "2016/Jan/01");
 	}
 
